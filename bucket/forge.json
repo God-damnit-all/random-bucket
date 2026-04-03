@@ -1,0 +1,31 @@
+{
+    "version": "2.5.1",
+    "description": "A comprehensive coding agent that integrates AI capabilities with your development environment",
+    "homepage": "https://github.com/antinomyhq/forgecode",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.5.1/forge-x86_64-pc-windows-msvc.exe",
+            "hash": "sha256:bfc42f57545c2097cb8cb9ea7c40bba029dc60b098628e3a3c3ef8698f85321c"
+        },
+        "arm64": {
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.5.1/forge-aarch64-pc-windows-msvc.exe",
+            "hash": "sha256:8e4341bfc4868abc5983a993b9524f709795e44ab7d9fb645ff5a0323aa45a83"
+        }
+    },
+    "pre_install": "Rename-Item -PSPath ([System.IO.Path]::Combine($dir, $manifest.architecture.$architecture.url.Split('/')[-1])) forge.exe",
+    "bin": "forge.exe",
+    "checkver": {
+        "github": "https://github.com/antinomyhq/forgecode"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/antinomyhq/forgecode/releases/download/v$version/forge-x86_64-pc-windows-msvc.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/antinomyhq/forgecode/releases/download/v$version/forge-aarch64-pc-windows-msvc.exe"
+            }
+        }
+    }
+}
