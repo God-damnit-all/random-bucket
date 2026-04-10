@@ -1,16 +1,16 @@
 {
-    "version": "2.9.7",
+    "version": "2.9.8",
     "description": "A comprehensive coding agent that integrates AI capabilities with your development environment",
     "homepage": "https://github.com/antinomyhq/forgecode",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.9.7/forge-x86_64-pc-windows-msvc.exe",
-            "hash": "14e694df644acfc64ed776b7e59cd9c73b210c84dd7c9b95ee5aa3df02fa3700"
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.9.8/forge-x86_64-pc-windows-msvc.exe",
+            "hash": "104382d8b61ae735bc8a60e968a2a55b4bac0133a8edff976ea5578a38919208"
         },
         "arm64": {
-            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.9.7/forge-aarch64-pc-windows-msvc.exe",
-            "hash": "914550d58400cbc47630e8b77c6bf48e336dc716b5e983e3af5262f069129ced"
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.9.8/forge-aarch64-pc-windows-msvc.exe",
+            "hash": "65ae8330130e21c116f873d49f7d0eab3d7f615592d311fed64849c23b82f465"
         }
     },
     "pre_install": "Rename-Item -PSPath ([System.IO.Path]::Combine($dir, $manifest.architecture.$architecture.url.Split('/')[-1])) forge.exe",
