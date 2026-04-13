@@ -144,6 +144,6 @@
         [ "usr\\local\\wbin\\yes.exe",          "unxutils_yes"          ],
         [ "usr\\local\\wbin\\zcat.exe",         "unxutils_zcat"         ],
         [ "usr\\local\\wbin\\zip.exe",          "unxutils_zip"          ],
-        [ "usr\\local\\wbin\\zsh.exe"           "unxutils_zsh"          ]
+        [ "usr\\local\\wbin\\zsh.exe",          "unxutils_zsh"          ]
     ]
 }
