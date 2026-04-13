@@ -17,7 +17,7 @@
             "hash": "4e39dc577782fd0af75222738e609ba43d8d2a98131e88928f1b0dad45048b99"
         }
     },
-    "bin": "busybox.exe"
+    "bin": "busybox.exe",
     "checkver": {
         "url": "https://frippery.org/files/busybox/?C=M;O=D",
         "regex": "busybox-w64-FRP-([\\w-]+)"
