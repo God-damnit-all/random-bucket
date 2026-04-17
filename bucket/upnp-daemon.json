@@ -1,0 +1,32 @@
+{
+    "version": "0.7.1",
+    "description": "A daemon for continuously opening ports via UPnP",
+    "homepage": "https://github.com/FloGa/upnp-daemon",
+    "license": "WTFPL",
+    "notes": "arm64 install is currently broken, but may work in the future",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/FloGa/upnp-daemon/releases/download/0.7.1/upnp-daemon-i686-pc-windows-msvc-0.7.1.zip",
+            "hash": "4175f254f4892a2993d78ae973b5b24d97fe171fc51a3ce801f28efc1421c375"
+        },
+        "64bit": {
+            "url": "https://github.com/FloGa/upnp-daemon/releases/download/0.7.1/upnp-daemon-x86_64-pc-windows-msvc-0.7.1.zip",
+            "hash": "4175f254f4892a2993d78ae973b5b24d97fe171fc51a3ce801f28efc1421c375"
+        }
+    },
+    "bin": "upnp-daemon.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/FloGa/upnp-daemon/releases/download/$version/upnp-daemon-i686-pc-windows-msvc-$version.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/FloGa/upnp-daemon/releases/download/$version/upnp-daemon-x86_64-pc-windows-msvc-$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
