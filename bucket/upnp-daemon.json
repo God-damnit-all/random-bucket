@@ -7,11 +7,11 @@
     "architecture": {
         "32bit": {
             "url": "https://github.com/FloGa/upnp-daemon/releases/download/0.7.1/upnp-daemon-i686-pc-windows-msvc-0.7.1.zip",
-            "hash": "4175f254f4892a2993d78ae973b5b24d97fe171fc51a3ce801f28efc1421c375"
+            "hash": "sha256:c1c2e9cb2fa06947e55fbf5fa464fadfedbabb11581be6202950f11d5427398b"
         },
         "64bit": {
             "url": "https://github.com/FloGa/upnp-daemon/releases/download/0.7.1/upnp-daemon-x86_64-pc-windows-msvc-0.7.1.zip",
-            "hash": "4175f254f4892a2993d78ae973b5b24d97fe171fc51a3ce801f28efc1421c375"
+            "hash": "sha256:f8c284636a62a067533fd078ab218b385580b25ea13d66f031e462a049fa0640"
         }
     },
     "bin": "upnp-daemon.exe",
