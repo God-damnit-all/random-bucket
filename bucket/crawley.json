@@ -1,5 +1,5 @@
 {
-    "version": "2.11.5",
+    "version": "1.7.19",
     "description": "Crawls web pages and prints any link it can find",
     "homepage": "https://github.com/s0rg/crawley",
     "license": "MIT",
