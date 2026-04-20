@@ -9,6 +9,7 @@
             "hash": "sha256:5da012992570c8f3a215f3c65baa53207b99ae2068e693a0759eb032303ccf87"
         }
     },
+    "extract_dir": "d2o-x86_64-pc-windows-msvc",
     "bin": "d2o.exe",
     "checkver": {
         "github": "https://github.com/MuntasirSZN/d2o"
