@@ -1,0 +1,23 @@
+{
+    "version": "0.11.3",
+    "description": "CLI and Library for Imgur API written in Rust 🦀",
+    "homepage": "https://github.com/OskarKarpinski/imgurs",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/OskarKarpinski/imgurs/releases/download/v0.11.3/imgurs-v0.11.3-x86_64-pc-windows-msvc.exe#/imgurs.exe",
+            "hash": "sha256:d35e4361874f1f8488af7add94f8f2fa5b51afdabc47c3ff490fa01cf7b28e90"
+        }
+    },
+    "bin": "imgurs.exe",
+    "checkver": {
+        "github": "https://github.com/OskarKarpinski/imgurs"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/OskarKarpinski/imgurs/releases/download/v$version/imgurs-v$version-x86_64-pc-windows-msvc.exe#/imgurs.exe"
+            }
+        }
+    }
+}
