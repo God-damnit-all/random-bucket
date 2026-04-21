@@ -1,0 +1,23 @@
+{
+    "version": "0.2.2",
+    "description": "A comprehensive coding agent that integrates AI capabilities with your development environment",
+    "homepage": "https://github.com/jaschadub/glum",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jaschadub/glum/releases/download/v0.2.2/glum-v0.2.2-x86_64-pc-windows-msvc.zip",
+            "hash": "sha256:b87ef1a073b6be5f13264c22f4606a22c5d5efec2da4e6778bd9d1e6639778e3"
+        }
+    },
+    "bin": "glum.exe",
+    "checkver": {
+        "github": "https://github.com/jaschadub/glum"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jaschadub/glum/releases/download/v$version/glum-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
