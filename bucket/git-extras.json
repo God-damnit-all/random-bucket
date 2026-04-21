@@ -1,0 +1,25 @@
+{
+    "version": "7.4.0",
+    "description": "Git utilities: repo summary, repl, changelog population, author commit percentages and more",
+    "homepage": "https://github.com/tj/git-extras",
+    "license": "MIT",
+    "depends": "7zip19.00-helper",
+    "suggest": {
+        "git": "git"
+    },
+    "url": "https://github.com/tj/git-extras/archive/7.4.0.zip#/dl.zip_",
+    "hash": "10a2be679152a33e2ee6ec5dd5f412ef4286be12e362fb3a3bfa89bb26f8cd59",
+    "pre_install": [
+        "[void](New-Item \"$dir\\..\\git-extras-$version\" -Target $dir -Type J)",
+        "[void](Invoke-ExternalCommand 7z1900-helper -Args @('x', '-bso0', \"$dir\\dl.zip_\", \"-o$dir\\..\"))"
+    ],
+    "post_install": [
+        "Remove-Item -PSPath \"$dir\\dl.zip_\"",
+        "Remove-Item -PSPath \"$dir\\..\\git-extras-$version\" -Recurse",
+        "& \"$dir\\install.cmd\""
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tj/git-extras/archive/$version.zip#/dl.zip_"
+    }
+}
