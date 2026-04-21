@@ -20,7 +20,6 @@
         "github": "https://github.com/Romelium/dircat-rust"
     },
     "autoupdate": {
-        "extract_dir": "dircat-$(if($architecture-eq'64bit'){'x86_64'}else{'aarch64'})-pc-windows-msvc-v$version",
         "architecture": {
             "64bit": {
                 "extract_dir": "dircat-x86_64-pc-windows-msvc-v$version",
