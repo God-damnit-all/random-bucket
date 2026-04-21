@@ -11,7 +11,9 @@
     "hash": "10a2be679152a33e2ee6ec5dd5f412ef4286be12e362fb3a3bfa89bb26f8cd59",
     "pre_install": [
         "[void](New-Item \"$dir\\..\\git-extras-$version\" -Target $dir -Type J)",
-        "[void](Invoke-ExternalCommand 7z1900-helper -Args @('x', '-bso0', \"$dir\\dl.zip_\", \"-o$dir\\..\"))"
+        "[void](Invoke-ExternalCommand 7z1900-helper -Args @('x', '-bso0', \"$dir\\dl.zip_\", \"-o$dir\\..\"))",
+        "# Workaround for Invoke-ExternalCommand messing up console output in some environments due to a trailing return character",
+        "[Console]::Write(\"`r\" + ' ' * [Console]::BufferWidth + \"`rRunning pre_install script...\")"
     ],
     "post_install": [
         "Remove-Item -PSPath \"$dir\\dl.zip_\"",
