@@ -14,10 +14,12 @@
         }
     },
     "bin": "dircat.exe",
+    "extract_dir": "dircat-$(if($architecture-eq'64bit'){'x86_64'}else{'aarch64'})-pc-windows-msvc-v1.0.1",
     "checkver": {
         "github": "https://github.com/Romelium/dircat-rust"
     },
     "autoupdate": {
+        "extract_dir": "dircat-$(if($architecture-eq'64bit'){'x86_64'}else{'aarch64'})-pc-windows-msvc-v$version",
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Romelium/dircat-rust/releases/download/v$version/dircat-x86_64-pc-windows-msvc-v$version.zip"
