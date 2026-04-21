@@ -1,0 +1,30 @@
+{
+    "version": "1.0.1",
+    "description": "Fast, gitignore-aware directory concatenation with Markdown output",
+    "homepage": "https://github.com/Romelium/dircat-rust",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Romelium/dircat-rust/releases/download/v1.0.1/dircat-x86_64-pc-windows-msvc-v1.0.1.zip",
+            "hash": "sha256:5b7861ad30308835759c173e1a33ce58efa08100a85ef6ea3f06f15c3251e423"
+        },
+        "arm64": {
+            "url": "https://github.com/Romelium/dircat-rust/releases/download/v1.0.1/dircat-aarch64-pc-windows-msvc-v1.0.1.zip",
+            "hash": "sha256:6ed306056837628eeb289eaf7b77d513147f860940d6fbcabf7687c6168d02f2"
+        }
+    },
+    "bin": "dircat.exe",
+    "checkver": {
+        "github": "https://github.com/Romelium/dircat-rust"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Romelium/dircat-rust/releases/download/v$version/dircat-x86_64-pc-windows-msvc-v$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Romelium/dircat-rust/releases/download/v$version/dircat-aarch64-pc-windows-msvc-v$version.zip"
+            }
+        }
+    }
+}
