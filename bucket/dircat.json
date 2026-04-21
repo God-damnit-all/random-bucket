@@ -5,16 +5,17 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
+            "extract_dir": "dircat-x86_64-pc-windows-msvc-v1.0.1",
             "url": "https://github.com/Romelium/dircat-rust/releases/download/v1.0.1/dircat-x86_64-pc-windows-msvc-v1.0.1.zip",
             "hash": "sha256:5b7861ad30308835759c173e1a33ce58efa08100a85ef6ea3f06f15c3251e423"
         },
         "arm64": {
+            "extract_dir": "dircat-aarch64-pc-windows-msvc-v1.0.1",
             "url": "https://github.com/Romelium/dircat-rust/releases/download/v1.0.1/dircat-aarch64-pc-windows-msvc-v1.0.1.zip",
             "hash": "sha256:6ed306056837628eeb289eaf7b77d513147f860940d6fbcabf7687c6168d02f2"
         }
     },
     "bin": "dircat.exe",
-    "extract_dir": "dircat-$(if($architecture-eq'64bit'){'x86_64'}else{'aarch64'})-pc-windows-msvc-v1.0.1",
     "checkver": {
         "github": "https://github.com/Romelium/dircat-rust"
     },
@@ -22,9 +23,11 @@
         "extract_dir": "dircat-$(if($architecture-eq'64bit'){'x86_64'}else{'aarch64'})-pc-windows-msvc-v$version",
         "architecture": {
             "64bit": {
+                "extract_dir": "dircat-x86_64-pc-windows-msvc-v$version",
                 "url": "https://github.com/Romelium/dircat-rust/releases/download/v$version/dircat-x86_64-pc-windows-msvc-v$version.zip"
             },
             "arm64": {
+                "extract_dir": "dircat-aarch64-pc-windows-msvc-v$version",
                 "url": "https://github.com/Romelium/dircat-rust/releases/download/v$version/dircat-aarch64-pc-windows-msvc-v$version.zip"
             }
         }
