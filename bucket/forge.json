@@ -1,16 +1,16 @@
 {
-    "version": "2.12.0",
+    "version": "2.12.1",
     "description": "A comprehensive coding agent that integrates AI capabilities with your development environment",
     "homepage": "https://github.com/antinomyhq/forgecode",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.12.0/forge-x86_64-pc-windows-msvc.exe#/forge.exe",
-            "hash": "e884cc7ff1abe2c0fe6bf6a8a37fb1b57c9b9dc291d78f2a42334cc66dcff7aa"
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.12.1/forge-x86_64-pc-windows-msvc.exe#/forge.exe",
+            "hash": "3ba86bece151d3ba38b1296d8c9d0a3255240270278d405594513e3d55d0baa5"
         },
         "arm64": {
-            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.12.0/forge-aarch64-pc-windows-msvc.exe#/forge.exe",
-            "hash": "716441717698fa1ee619a187b03a31612803451e314a39158a961ac58936bfe2"
+            "url": "https://github.com/antinomyhq/forgecode/releases/download/v2.12.1/forge-aarch64-pc-windows-msvc.exe#/forge.exe",
+            "hash": "7933417278f8a72d81951d7a99dadc93ada744dcc7bb8823f565e90206aa27d1"
         }
     },
     "bin": "forge.exe",
