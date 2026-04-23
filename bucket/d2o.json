@@ -1,12 +1,12 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Parses help or manpage texts and exports them as shell completion scripts or JSON",
     "homepage": "https://github.com/MuntasirSZN/d2o",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MuntasirSZN/d2o/releases/download/v0.1.0/d2o-x86_64-pc-windows-msvc.zip",
-            "hash": "sha256:5da012992570c8f3a215f3c65baa53207b99ae2068e693a0759eb032303ccf87"
+            "url": "https://github.com/MuntasirSZN/d2o/releases/download/v0.1.1/d2o-x86_64-pc-windows-msvc.zip",
+            "hash": "f1fa7fac6a5e8b7e2cc0477bc9626234bc230a0db2ac3acb1e99d3282d09864d"
         }
     },
     "extract_dir": "d2o-x86_64-pc-windows-msvc",
