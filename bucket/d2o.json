@@ -6,10 +6,15 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/MuntasirSZN/d2o/releases/download/v0.1.1/d2o-x86_64-pc-windows-msvc.zip",
-            "hash": "f1fa7fac6a5e8b7e2cc0477bc9626234bc230a0db2ac3acb1e99d3282d09864d"
+            "hash": "sha256:d4725fbac184eab2faa750d20a5f8753cf546face6033480158cfbe8ddc37efd",
+            "extract_dir": "d2o-x86_64-pc-windows-msvc"
+        },
+        "arm64": {
+            "url": "https://github.com/MuntasirSZN/d2o/releases/download/v0.1.1/d2o-aarch64-pc-windows-msvc.zip",
+            "hash": "sha256:698124ad628a4ef6cfcd717a11207cf1fbeabae0f5676a8a08a7a1e8bb196ed6",
+            "extract_dir": "d2o-aarch64-pc-windows-msvc"
         }
     },
-    "extract_dir": "d2o-x86_64-pc-windows-msvc",
     "bin": "d2o.exe",
     "checkver": {
         "github": "https://github.com/MuntasirSZN/d2o"
@@ -17,7 +22,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
+                "extract_dir": "d2o-x86_64-pc-windows-msvc",
                 "url": "https://github.com/MuntasirSZN/d2o/releases/download/v$version/d2o-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "extract_dir": "d2o-aarch64-pc-windows-msvc",
+                "url": "https://github.com/MuntasirSZN/d2o/releases/download/v$version/d2o-aarch64-pc-windows-msvc.zip"
             }
         }
     }
