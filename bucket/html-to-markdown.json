@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.4.0/cli-x86_64-pc-windows-msvc.zip",
-            "hash": "e235c12fd0c41e42d85925fe9fc37f16141c7c5c7b153776a247965950a6211a"
+            "hash": "sha256:486b17732426d1a3e97151f1da07aeef5c490ce951ef4d4d6684ddf6f5bb7d8d"
         },
         "arm64": {
             "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.4.0/cli-aarch64-pc-windows-msvc.zip",
-            "hash": "efa5b8fdf6e56eabe068659afa67cf6618174a3af6b35b5502a53fa8a40ce7c2"
+            "hash": "sha256:dbcacae90f431faf7c1b55a40357158e70e9d7d17357c93c94ecb0614a60e44d"
         }
     },
     "bin": "html-to-markdown.exe",
