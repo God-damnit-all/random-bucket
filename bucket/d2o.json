@@ -22,11 +22,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "extract_dir": "d2o-x86_64-pc-windows-msvc",
                 "url": "https://github.com/MuntasirSZN/d2o/releases/download/v$version/d2o-x86_64-pc-windows-msvc.zip"
             },
             "arm64": {
-                "extract_dir": "d2o-aarch64-pc-windows-msvc",
                 "url": "https://github.com/MuntasirSZN/d2o/releases/download/v$version/d2o-aarch64-pc-windows-msvc.zip"
             }
         }
