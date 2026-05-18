@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Water-Run/treepp/releases/download/0.4.0/treepp-v0.4.0-windows-x64.zip",
-            "hash": "sha256:b3cd3dbf663ec1421acbfeedb9c115aa3d4911918a18a9b480d3a5721bfac4e4"
+            "hash": "b3cd3dbf663ec1421acbfeedb9c115aa3d4911918a18a9b480d3a5721bfac4e4"
         }
     },
     "bin": "treepp.exe",
