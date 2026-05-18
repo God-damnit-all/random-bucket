@@ -10,8 +10,7 @@
     "hash": "298f156dc7b73781721377860aa3d4199eae364dbe1bcab389eaacf7d069642e",
     "pre_install": [
         "[void](Microsoft.PowerShell.Management\\New-Item \"$dir\\..\\git-extras-$version\" -Target $dir -Type J)",
-        "$oldProgressPreference = $ProgressPreference",
-        "$global:ProgressPreference = 'SilentlyContinue'",
+        "$oldProgressPreference, $global:ProgressPreference = $global:ProgressPreference, 'SilentlyContinue'",
         "try { Microsoft.PowerShell.Archive\\Expand-Archive -PSPath \"$dir\\dl.zip_\" -DestinationPath \"$dir\\..\" }",
         "finally { $global:ProgressPreference = $oldProgressPreference }"
     ],
