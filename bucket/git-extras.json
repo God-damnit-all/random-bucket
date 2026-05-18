@@ -17,7 +17,7 @@
     ],
     "post_install": [
         "Remove-Item -PSPath \"$dir\\dl.zip_\"",
-        "Remove-Item -PSPath \"$dir\\..\\git-extras-$version\" -Recurse",
+        "Remove-Item -PSPath \"$dir\\..\\git-extras-$version\"",
         "& \"$dir\\install.cmd\""
     ],
     "checkver": "github",
