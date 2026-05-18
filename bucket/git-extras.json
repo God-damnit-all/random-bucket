@@ -16,8 +16,7 @@
         "finally { $global:ProgressPreference = $oldProgressPreference }"
     ],
     "post_install": [
-        "Remove-Item -PSPath \"$dir\\dl.zip_\"",
-        "Remove-Item -PSPath \"$dir\\..\\git-extras-$version\"",
+        "Remove-Item -PSPath \"$dir\\dl.zip_\", \"$dir\\..\\git-extras-$version\"",
         "& \"$dir\\install.cmd\""
     ],
     "checkver": "github",
