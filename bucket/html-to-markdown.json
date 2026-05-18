@@ -6,11 +6,13 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.4.1/cli-x86_64-pc-windows-msvc.zip",
-            "hash": "255f33e7e9fe403e4b20587a2c136b757e286e3f24b3239b68ccbc8e0533f422"
+            "hash": "255f33e7e9fe403e4b20587a2c136b757e286e3f24b3239b68ccbc8e0533f422",
+            "extract_dir": "cli-x86_64-pc-windows-msvc"
         },
         "arm64": {
             "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.4.1/cli-aarch64-pc-windows-msvc.zip",
-            "hash": "6e92e7d2a86adef67fda39cdc1ca785b0bdd57358278547372f2102bb02cde21"
+            "hash": "6e92e7d2a86adef67fda39cdc1ca785b0bdd57358278547372f2102bb02cde21",
+            "extract_dir": "cli-aarch64-pc-windows-msvc"
         }
     },
     "bin": "html-to-markdown.exe",
@@ -20,10 +22,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v$version/cli-x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v$version/cli-x86_64-pc-windows-msvc.zip",
+                "extract_dir": "cli-x86_64-pc-windows-msvc"
             },
             "arm64": {
-                "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v$version/cli-aarch64-pc-windows-msvc.zip"
+                "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v$version/cli-aarch64-pc-windows-msvc.zip",
+                "extract_dir": "cli-aarch64-pc-windows-msvc"
             }
         }
     }
