@@ -3,7 +3,6 @@
     "description": "Git utilities: repo summary, repl, changelog population, author commit percentages and more",
     "homepage": "https://github.com/tj/git-extras",
     "license": "MIT",
-    "depends": "7zip19.00-helper",
     "suggest": {
         "git": "git"
     },
@@ -11,9 +10,10 @@
     "hash": "298f156dc7b73781721377860aa3d4199eae364dbe1bcab389eaacf7d069642e",
     "pre_install": [
         "[void](New-Item \"$dir\\..\\git-extras-$version\" -Target $dir -Type J)",
-        "[void](Invoke-ExternalCommand 7z1900-helper -Args @('x', '-bso0', \"$dir\\dl.zip_\", \"-o$dir\\..\"))",
-        "# Workaround for Invoke-ExternalCommand messing up console output in some environments due to a trailing return character",
-        "[Console]::Write(\"`r\" + ' ' * [Console]::BufferWidth + \"`rRunning pre_install script...\")"
+        "$oldProgressPreference = $ProgressPreference",
+        "$global:ProgressPreference = 'SilentlyContinue'",
+        "try { Microsoft.PowerShell.Archive\\Expand-Archive -PSPath \"$dir\\dl.zip_\" -DestinationPath \"$dir\\..\" }",
+        "finally { $global:ProgressPreference = $oldProgressPreference }"
     ],
     "post_install": [
         "Remove-Item -PSPath \"$dir\\dl.zip_\"",
