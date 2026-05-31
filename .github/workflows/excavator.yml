@@ -2,7 +2,9 @@ on:
   workflow_dispatch:
   schedule:
     # run every 8 hours: https://ncrontab.swimburger.net
-    - cron: '20 */8 * * *'
+    #- cron: '20 */8 * * *'
+    # run every 24 hours: https://ncrontab.swimburger.net
+    - cron: '0 0 * * *'
 name: Excavator
 jobs:
   excavate:
