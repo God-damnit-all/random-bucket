@@ -1,12 +1,12 @@
 {
-    "version": "0.4.0",
+    "version": "0.5.0",
     "description": "A better Windows \"tree\" command — more features, faster performance, and diff-level compatibility with the original \"tree\"",
     "homepage": "https://github.com/Water-Run/treepp",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Water-Run/treepp/releases/download/0.4.0/treepp-v0.4.0-windows-x64.zip",
-            "hash": "b3cd3dbf663ec1421acbfeedb9c115aa3d4911918a18a9b480d3a5721bfac4e4"
+            "url": "https://github.com/Water-Run/treepp/releases/download/0.5.0/treepp-v0.5.0-windows-x64.zip",
+            "hash": "391717e59697353d4050e6ebe5c563a2cec9a6398e8a106932d88861e391a2a6"
         }
     },
     "bin": "treepp.exe",
