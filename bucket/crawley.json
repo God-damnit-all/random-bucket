@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/s0rg/crawley/releases/download/v${version}/crawley_v${version}_windows_x86_64.zip"
+                "url": "https://github.com/s0rg/crawley/releases/download/${version}/crawley_${version}_windows_x86_64.zip"
             }
         }
     }
