@@ -11,7 +11,7 @@ jobs:
     name: Excavate
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@6
+      - uses: actions/checkout@v6
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
