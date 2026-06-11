@@ -9,10 +9,7 @@
             "hash": "sha256:5ec17b8e89dbc280b0844574db8153855c7e94db67563cfbd78a505aa6511a47"
         }
     },
-    "bin": [
-        ["winscript-portable.exe", "winscript"],
-        "winscript-portable.exe"
-    ],
+    "bin": [ ["winscript-portable.exe", "winscript"] ],
     "checkver": {
         "github": "https://github.com/flick9000/winscript"
     },
