@@ -1,15 +1,20 @@
 {
-    "version": "2.18.0",
+    "version": "2.18.1",
     "description": "A lightweight script builder for removing bloatware, disabling telemetry, improving OS performance, bulk-installing winget apps, and more",
     "homepage": "https://github.com/flick9000/winscript",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/flick9000/winscript/releases/download/v2.18.0/winscript-portable.exe",
-            "hash": "sha256:5ec17b8e89dbc280b0844574db8153855c7e94db67563cfbd78a505aa6511a47"
+            "url": "https://github.com/flick9000/winscript/releases/download/v2.18.1/winscript-portable.exe",
+            "hash": "e96f4ec062a0a951a5813e3f79bef816cd9352389d4f9dc6d368828f5f36ebd0"
         }
     },
-    "bin": [ ["winscript-portable.exe", "winscript"] ],
+    "bin": [
+        [
+            "winscript-portable.exe",
+            "winscript"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/flick9000/winscript"
     },
