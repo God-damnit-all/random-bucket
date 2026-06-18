@@ -1,17 +1,17 @@
 {
-    "version": "3.6.13",
+    "version": "3.6.14",
     "description": "High-performance HTML to Markdown conversion powered by Rust",
     "homepage": "https://github.com/kreuzberg-dev/html-to-markdown",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.6.13/cli-x86_64-pc-windows-msvc.zip",
-            "hash": "0c67bf38981cc2a3a59e9b6687095541fa13a7ad3d287b1c5b25aeb2bc972170",
+            "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.6.14/cli-x86_64-pc-windows-msvc.zip",
+            "hash": "371156b47b876ac2c48ae3fa653b05bfd8028835fa71371cb566af242c7d618c",
             "extract_dir": "cli-x86_64-pc-windows-msvc"
         },
         "arm64": {
-            "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.6.13/cli-aarch64-pc-windows-msvc.zip",
-            "hash": "b8363c439c32a000ea0f5c5829fb38114c2d701930bbd013b9277a362627a156",
+            "url": "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.6.14/cli-aarch64-pc-windows-msvc.zip",
+            "hash": "125fbee7e77b04ea02e7a84ff19fea8a4aad0553ff4f4011a7294b6a8714dc5b",
             "extract_dir": "cli-aarch64-pc-windows-msvc"
         }
     },
