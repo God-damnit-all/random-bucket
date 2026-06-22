@@ -25,7 +25,7 @@
             ]
         }
     },
-    "bin": ["cpz.exe", "rmz.exe"]
+    "bin": ["cpz.exe", "rmz.exe"],
     "checkver": {
         "github": "https://github.com/SUPERCILEX/fuc"
     },
