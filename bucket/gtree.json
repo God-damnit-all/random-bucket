@@ -1,20 +1,20 @@
 {
-    "version": "1.14.2",
+    "version": "1.14.3",
     "description": "Easily output file directory tree hierarchy in Markdown",
     "homepage": "https://github.com/ddddddO/gtree",
     "license": "BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.2/gtree_Windows_x86_64.zip",
-            "hash": "sha256:10bbf1643c050622f29c912e9629275dcda6e1acbd8de50fe721b0aa1d91bcc3"
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.3/gtree_Windows_x86_64.zip",
+            "hash": "eab6c084fdd8aac34dd36f29c7c5d16af01fca5d216aab03b318cc280d2ca49e"
         },
         "32bit": {
-            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.2/gtree_Windows_i386.zip",
-            "hash": "sha256:9756d68384a1f3d6b312c8ad1e3e96517742db8b8868a2bb623ea3f1ff799376"
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.3/gtree_Windows_i386.zip",
+            "hash": "f86b99e56fe62a3606788440842cb7318ee89db7d15ccb73578e58fabc264e1d"
         },
         "arm64": {
-            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.2/gtree_Windows_arm64.zip",
-            "hash": "sha256:2eb429142acbe1e11c3870d8f636db7a2729f0ab0902efedba4f1c8867e6df57"
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.3/gtree_Windows_arm64.zip",
+            "hash": "3f0649b10d5f8492db88742e4346e4e3065704308b75afbc6af06c785026a2fc"
         }
     },
     "bin": "gtree.exe",
