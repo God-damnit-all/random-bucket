@@ -1,0 +1,25 @@
+{
+    "version": "0.9.1",
+    "description": "A terminal program for legacy BBS systems",
+    "homepage": "https://github.com/mkrueger/icy_tools",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyView0.9.1/icy_view_windows_0.9.1.zip",
+            "hash": "sha256:e47f63d28112f96e72fa8786d98cbb9b2805e5b2022e94047241740bca850e2c"
+        }
+    },
+    "bin": "icy_view.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/mkrueger/icy_tools/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "IcyView([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyView$version/icy_view_windows_$version.zip"
+            }
+        }
+    }
+}
