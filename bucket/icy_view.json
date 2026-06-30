@@ -1,6 +1,6 @@
 {
     "version": "0.9.0",
-    "description": "A terminal program for legacy BBS systems",
+    "description": "A viewer to browse/view ANSI screens",
     "homepage": "https://github.com/mkrueger/icy_tools",
     "license": "Apache-2.0|MIT",
     "architecture": {
