@@ -11,8 +11,7 @@
     },
     "bin": "icy_view.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/mkrueger/icy_tools/releases",
-        "jsonpath": "$..tag_name",
+        "url": "https://github.com/mkrueger/icy_tools/releases.atom",
         "regex": "IcyView([\\d.]+)"
     },
     "autoupdate": {
