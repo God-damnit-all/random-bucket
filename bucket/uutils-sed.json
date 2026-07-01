@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/uutils/sed/releases/download/0.1.1/sed-x86_64-pc-windows-msvc.zip",
-            "hash": "https://github.com/uutils/sed/releases/download/0.1.1/sed-x86_64-pc-windows-msvc.zip.sha256"
+            "hash": "sha256:047b73df07c6a6f22a4f57f809ed7d3ad4f6f7eb41e1f42a6365c9f55c2de5f3"
         }
     },
     "bin": "sed.exe",
@@ -16,8 +16,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/uutils/sed/releases/download/$version/sed-x86_64-pc-windows-msvc.zip",
-                "hash": "https://github.com/uutils/sed/releases/download/$version/sed-x86_64-pc-windows-msvc.zip.sha256"
+                "url": "https://github.com/uutils/sed/releases/download/$version/sed-x86_64-pc-windows-msvc.zip"
+            },
+            "hash": {
+                "url": "$baseurl.sha256"
             }
         }
     }
