@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/uutils/sed/releases/download/0.1.1/sed-x86_64-pc-windows-msvc.zip",
-            "hash": "sha256:047b73df07c6a6f22a4f57f809ed7d3ad4f6f7eb41e1f42a6365c9f55c2de5f3"
+            "hash": "sha256:558fb3c5ba636403ab6a7137846d202009cf717ca8673339bb121f8231509dbf"
         }
     },
     "bin": "sed.exe",
