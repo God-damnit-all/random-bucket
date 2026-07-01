@@ -1,0 +1,23 @@
+{
+    "version": "1.0.2",
+    "description": "An experimental drop-in replacement for GNU sed, written in Rust",
+    "homepage": "https://github.com/uutils/red",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/uutils/red/releases/download/v1.0.2/red-windows-x86_64.zip",
+            "hash": "sha256:b37a95c5540dffa2ab607e47f0d89664236d93ee76a2a348b41a5a631401a055"
+        }
+    },
+    "bin": "red.exe",
+    "checkver": {
+        "github": "https://github.com/uutils/red"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/uutils/red/releases/download/v$version/red-windows-x86_64.zip"
+            }
+        }
+    }
+}
