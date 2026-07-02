@@ -3,6 +3,10 @@
     "description": "Easily output file directory tree hierarchy in Markdown",
     "homepage": "https://github.com/ddddddO/gtree",
     "license": "BSD-2-Clause",
+    "notes": [
+        "The project also has a tool called xtree which is not yet part of the release distribution.",
+        "You can build it with this command: go install github.com/ddddddO/gtree/cmd/xtree@latest"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/ddddddO/gtree/releases/download/v1.14.9/gtree_Windows_x86_64.zip",
