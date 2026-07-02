@@ -1,0 +1,26 @@
+{
+    "version": "0.26.2",
+    "description": "lua 5.5 runtime implement in rust",
+    "homepage": "https://github.com/CppCXY/lua-rs",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CppCXY/lua-rs/releases/download/0.26.2/luars-0.26.2-x86_64-pc-windows-msvc.zip",
+            "hash": "sha256:bd271e4288981bf1eb6b850b41eec88e4fb9d5738e771edf28bb6ffbb3bcf8ac"
+        }
+    },
+    "bin": [
+        "lua.exe",
+        "bytecode_dump.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/CppCXY/lua-rs"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CppCXY/lua-rs/releases/download/$version/luars-$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
