@@ -1,0 +1,51 @@
+{
+    "version": "0.34.0",
+    "description": "A moonscipt dialect that is derived from the Moonscript language and continuously adopting new features to be more up to date. Just like moonscipt, it also compiles into Lua.",
+    "homepage": "https://yuescript.org/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x64.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x64-lua53-dll.7z"
+            ],
+            "hash": [
+                "9b3cc0068eac1ef2751d29c83653c51b426b2e00722a9cd0f13f616b269ef189",
+                "c55dbada440d88bed7992a4aca5c14916402c15ffd873af55117d945eea05ba3"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x86.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x86-lua53-dll.7z"
+            ],
+            "hash": [
+                "6791df295dd302bc68e0aea1c4c71d4a592f44daaf2f6864882d649a171b4d4a",
+                "37d2801c83eea5296ba5101dd092ff3c6df2583fb545c15c6bbf2ffcfc867736"
+            ]
+        }
+    },
+    "bin": "yue.exe",
+    "post_install": [
+        "Write-Host The YueScript Lua module has also been downloaded and is located at: $dir\\lua.dll"
+    ],
+    "checkver": {
+        "github": "https://github.com/pigpigyyy/Yuescript"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x64.7z",
+                    "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x64-lua53-dll.7z"
+                ],
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x86.7z",
+                    "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x86-lua53-dll.7z"
+                ],
+            }
+        }
+    }
+}
