@@ -1,0 +1,41 @@
+{
+    "version": "59d94d19",
+    "description": "GPU-accelerated terminal emulator (nightly builds)",
+    "homepage": "https://github.com/wez/wezterm",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip",
+            "hash": "d31bd68440d5ec9c134342a2943cdcddb792570563e16d0fe514b5859d64e71d",
+        }
+    },
+    "installer": {
+        "script": [
+            "$dirName = (Get-Item -PSPath $dir -Filter WezTerm-windows-*).Name",
+            "Get-ChildItem -PSPath $dir\\$dirName | Move-Item -Destination $dir",
+            "Remove-Item -PSPath $dir\\$dirName"
+        ]
+    },
+    "bin": [
+        "wezterm.exe",
+        "wezterm-gui.exe"
+    ],
+    "shortcuts": [
+        [ "wezterm-gui.exe", "WezTerm" ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/wezterm/wezterm/actions/workflows/551514/runs?status=success",
+        "jsonpath": "$.workflow_runs..head_sha",
+        "regex": "^(.{8})"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
