@@ -27,9 +27,10 @@
     },
     "bin": "yue.exe",
     "post_install": [
-        "[Console]::WriteLine()",
+        "[Console]::WriteLine([Environment]::NewLine)                                                            ",
         "Write-Host -ForegroundColor 'White' The YueScript Lua module has also been downloaded and is located at:",
-        "Write-Host -ForegroundColor 'White' $dir\\lua.dll"
+        "Write-Host -ForegroundColor 'White' $dir\\lua.dll                                                       ",
+        "[Console]::WriteLine()                                                                                  "
     ],
     "checkver": {
         "github": "https://github.com/pigpigyyy/Yuescript"
