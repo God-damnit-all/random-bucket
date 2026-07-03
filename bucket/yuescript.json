@@ -1,6 +1,6 @@
 {
     "version": "0.34.0",
-    "description": "A moonscipt dialect that is derived from the Moonscript language and continuously adopting new features to be more up to date. Just like moonscipt, it also compiles into Lua.",
+    "description": "A language that compiles to Lua (just like the MoonScript language it's derived from); it continues to adopt new features to stay up-to-date",
     "homepage": "https://yuescript.org/",
     "license": "MIT",
     "architecture": {
@@ -27,10 +27,11 @@
     },
     "bin": "yue.exe",
     "post_install": [
-        "[Console]::WriteLine([Environment]::NewLine)                                                            ",
-        "Write-Host -ForegroundColor 'White' The YueScript Lua module has also been downloaded and is located at:",
-        "Write-Host -ForegroundColor 'White' $dir\\lua.dll                                                       ",
-        "[Console]::WriteLine()                                                                                  "
+        "[Console]::WriteLine([Environment]::NewLine)                                          ",
+        "Write-Host -ForegroundColor 'White' The YueScript Lua module has also been downloaded!",
+        "Write-Host -ForegroundColor 'White' It can be found at the following path:            ",
+        "Write-Host -ForegroundColor 'White' $dir\\lua.dll                                     ",
+        "[Console]::WriteLine()                                                                "
     ],
     "checkver": {
         "github": "https://github.com/pigpigyyy/Yuescript"
