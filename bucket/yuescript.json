@@ -1,27 +1,27 @@
 {
-    "version": "0.34.0",
+    "version": "0.34.1",
     "description": "A language that compiles to Lua (just like the MoonScript language it's derived from); it continues to adopt new features to stay up-to-date",
     "homepage": "https://yuescript.org/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x64.7z",
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x64-lua53-dll.7z"
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.1/yue-windows-x64.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.1/yue-windows-x64-lua53-dll.7z"
             ],
             "hash": [
-                "9b3cc0068eac1ef2751d29c83653c51b426b2e00722a9cd0f13f616b269ef189",
-                "c55dbada440d88bed7992a4aca5c14916402c15ffd873af55117d945eea05ba3"
+                "f8e600bec696474b09812db9c4b0d6ce26b1fc73742a174b494fff46f280128d",
+                "9504ca8e9dcf54a274c514ae4c6bb9674d33212dd140017997402d6d36deaf4b"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x86.7z",
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.0/yue-windows-x86-lua53-dll.7z"
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.1/yue-windows-x86.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.1/yue-windows-x86-lua53-dll.7z"
             ],
             "hash": [
-                "6791df295dd302bc68e0aea1c4c71d4a592f44daaf2f6864882d649a171b4d4a",
-                "37d2801c83eea5296ba5101dd092ff3c6df2583fb545c15c6bbf2ffcfc867736"
+                "7bec6b71af4214a354012279256bbbb6ddfadbb17f848790865cbe5609590ce3",
+                "1ddbab4d37c728719c923d24ddc348265ed96bab3eca282f321e57471d9b3ce6"
             ]
         }
     },
@@ -42,13 +42,13 @@
                 "url": [
                     "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x64.7z",
                     "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x64-lua53-dll.7z"
-                ],
+                ]
             },
             "32bit": {
                 "url": [
                     "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x86.7z",
                     "https://github.com/pigpigyyy/Yuescript/releases/download/v$version/yue-windows-x86-lua53-dll.7z"
-                ],
+                ]
             }
         }
     }
