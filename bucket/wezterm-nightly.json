@@ -11,9 +11,9 @@
     },
     "installer": {
         "script": [
-            "$dirName = (Get-Item -PSPath $dir -Filter WezTerm-windows-*).Name",
-            "Get-ChildItem -PSPath $dir\\$dirName | Move-Item -Destination $dir",
-            "Remove-Item -PSPath $dir\\$dirName"
+            "$subDir = (Get-ChildItem -PSPath $dir -Filter WezTerm-windows-*).Name",
+            "Get-ChildItem -PSPath $dir\\$subDir | Move-Item -Destination $dir",
+            "Remove-Item -PSPath $dir\\$subDir"
         ]
     },
     "bin": [
