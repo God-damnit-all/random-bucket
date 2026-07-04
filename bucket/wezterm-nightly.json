@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip",
-            "hash": "d31bd68440d5ec9c134342a2943cdcddb792570563e16d0fe514b5859d64e71d"
+            "hash": "9e76d2ce56fbe180f5fa730fbb5f4068ba950affe5ad0b8092e70dd9a090f11c"
         }
     },
     "installer": {
