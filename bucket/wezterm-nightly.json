@@ -1,12 +1,12 @@
 {
-    "version": "59d94d19",
+    "version": "[\"59d94d",
     "description": "GPU-accelerated terminal emulator (nightly builds)",
     "homepage": "https://github.com/wez/wezterm",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip",
-            "hash": "d31bd68440d5ec9c134342a2943cdcddb792570563e16d0fe514b5859d64e71d",
+            "hash": "d31bd68440d5ec9c134342a2943cdcddb792570563e16d0fe514b5859d64e71d"
         }
     },
     "installer": {
@@ -16,7 +16,7 @@
             "Remove-Item -PSPath $dir\\$subDir",
             "[void](New-Item $persist_dir\\wezterm_modules -Type D -Force)",
             "if (New-Item $persist_dir\\wezterm.lua -ea 0) {",
-                "Set-Content -PSPath $persist_dir\\wezterm.lua 'return {}'",
+            "Set-Content -PSPath $persist_dir\\wezterm.lua 'return {}'",
             "}"
         ]
     },
@@ -29,7 +29,10 @@
         "wezterm-gui.exe"
     ],
     "shortcuts": [
-        [ "wezterm-gui.exe", "WezTerm" ]
+        [
+            "wezterm-gui.exe",
+            "WezTerm"
+        ]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/wezterm/wezterm/actions/workflows/551514/runs?status=success",
