@@ -16,7 +16,7 @@
             "Remove-Item -PSPath $dir\\$subDir",
             "[void](New-Item $persist_dir\\wezterm_modules -Type D -Force)",
             "if (New-Item $persist_dir\\wezterm.lua -ea 0) {",
-            "Set-Content -PSPath $persist_dir\\wezterm.lua 'return {}'",
+            "  Set-Content -PSPath $persist_dir\\wezterm.lua 'return {}'",
             "}"
         ]
     },
@@ -37,7 +37,7 @@
     "checkver": {
         "url": "https://api.github.com/repos/wezterm/wezterm/actions/workflows/551514/runs?status=success",
         "jsonpath": "$.workflow_runs..head_sha",
-        "regex": "^[^A-Fa-F0-9]*(.{8})"
+        "regex": "^[^A-Fa-f0-9]*(.{8})"
     },
     "autoupdate": {
         "architecture": {
