@@ -1,5 +1,5 @@
 {
-    "version": "[\"59d94d",
+    "version": "59d94d19",
     "description": "GPU-accelerated terminal emulator (nightly builds)",
     "homepage": "https://github.com/wez/wezterm",
     "license": "MIT",
