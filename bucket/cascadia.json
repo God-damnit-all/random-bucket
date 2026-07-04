@@ -1,0 +1,30 @@
+{
+    "version": "1.5.1",
+    "description": "CSS selector tool for HTML; the CLI wrapper the cascadia Go package",
+    "homepage": "https://github.com/suntong/cascadia",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suntong/cascadia/releases/download/v1.5.1/cascadia_1.5.1_windows_amd64.zip",
+            "hash": "sha256:ecf602ed5ed662b2e10783217675da46df22f15850be02f59e4d46812371c30f"
+        },
+        "arm64": {
+            "url": "https://github.com/suntong/cascadia/releases/download/v1.5.1/cascadia_1.5.1_windows_arm64.zip",
+            "hash": "sha256:29b08e7c872e2487bfcbc6a63912f92384385cd8cfa453953ab1c10a1e9988a6"
+        }
+    },
+    "bin": "cascadia.exe",
+    "checkver": {
+        "github": "https://github.com/suntong/cascadia"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/suntong/cascadia/releases/download/v$version/cascadia_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/suntong/cascadia/releases/download/v$version/cascadia_$version_windows_arm64.zip"
+            }
+        }
+    }
+}
