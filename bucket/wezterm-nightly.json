@@ -5,8 +5,8 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip",
-            "hash": "201e03afc680bd147077ec160cbe7019066229525c08eb904a6da2633dcbf53b"
+            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip#/b58d7d68.zip",
+            "hash": "b58d7d682af60bb7d7630781872457e4421d0f7d01032d8920d3cf693594aa98"
         }
     },
     "installer": {
@@ -42,7 +42,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
+                "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip#/$version.zip"
             }
         },
         "hash": {
