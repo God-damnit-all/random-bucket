@@ -19,6 +19,8 @@
                 "url": "https://github.com/LargeModGames/spotatui/releases/download/v$version/spotatui-windows-x86_64.zip"
             }
         },
-        "hash": "$url.sha256"
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
 }
