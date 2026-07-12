@@ -1,0 +1,24 @@
+{
+    "version": "0.40.2",
+    "description": "A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic, radio, and YouTube sources",
+    "homepage": "https://github.com/LargeModGames/spotatui",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LargeModGames/spotatui/releases/download/v0.40.2/spotatui-windows-x86_64.zip",
+            "hash": "sha256:d757d933812e7cd46fab54f11ca687133d496cac2def078f35387c0b0221c986"
+        }
+    },
+    "bin": "spotatui.exe",
+    "checkver": {
+        "github": "https://github.com/LargeModGames/spotatui"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LargeModGames/spotatui/releases/download/v$version/spotatui-windows-x86_64.zip"
+            }
+        },
+        "hash": "$url.sha256"
+    }
+}
