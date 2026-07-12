@@ -10,7 +10,7 @@
             "extract_dir": "termusic-v0.13.2-x86_64-windows"
         }
     },
-    "bin": [ "termusic.exe", "termusic-server.exe" ]
+    "bin": [ "termusic.exe", "termusic-server.exe" ],
     "checkver": {
         "github": "https://github.com/tramhao/termusic"
     },
