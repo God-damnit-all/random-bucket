@@ -1,0 +1,39 @@
+{
+    "version": "2.7.0",
+    "description": "Transparently routes all network traffic from any application through a proxy via a gVisor TCP/IP stack",
+    "homepage": "https://github.com/xjasonlyu/tun2socks",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v2.7.0/tun2socks-windows-amd64-v3.zip",
+            "hash": "sha256:ea9caa464664325afaaeded3e157a2152e29c5cfaa20a54157bcf330d6a93873",
+            "bin": [ "tun2socks-windows-amd64-v3.exe" , "tun2socks.exe" ]
+        },
+        "32bit": {
+            "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v2.7.0/tun2socks-windows-386.zip",
+            "hash": "sha256:ad870a2ca99d617e004ec09f8f5cca2c134b4d16ae12b4eac0ff6d9fe05d9044",
+            "bin": [ "tun2socks-windows-386.exe"      , "tun2socks.exe" ]
+        },
+        "arm64": {
+            "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v2.7.0/tun2socks-windows-arm64.zip",
+            "hash": "sha256:74497771068da13f42921adfc540f2abb9ac822404582c8cbe34d30e8c0ea1f5",
+            "bin": [ "tun2socks-windows-arm64.exe"    , "tun2socks.exe" ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/xjasonlyu/tun2socks"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v$version/tun2socks-windows-amd64-v3.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v$version/tun2socks-windows-386.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/xjasonlyu/tun2socks/releases/download/v$version/tun2socks-windows-arm64.zip"
+            }
+        }
+    }
+}
