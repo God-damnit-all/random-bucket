@@ -1,0 +1,37 @@
+{
+    "version": "2.3.0",
+    "description": "A SOCKS5 proxifier leveraging NDISAPI to transparently route TCP and UDP traffic on a per-app basis",
+    "homepage": "https://github.com/wiresock/proxifyre",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-x64.zip",
+            "hash": "sha256:82be1118968fb28ec8fc3fca1437a69094ea8fab12875c76d0429de8b8f6fd24"
+        },
+        "32bit": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-x86.zip",
+            "hash": "sha256:21c3a7c3a02d45f053e99272a3dfe7be80712ccaba817268df6c3e118ae4561b"
+        },
+        "arm64": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-ARM64.zip",
+            "hash": "sha256:55cf1d0323b869f50c2c61c4363128fb4f6fb030a482eb1e2ca0f6a2a50fc91d"
+        }
+    },
+    "bin": "ProxiFyre.exe",
+    "checkver": {
+        "github": "https://github.com/wiresock/proxifyre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-ARM64.zip"
+            }
+        }
+    }
+}
