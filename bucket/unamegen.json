@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/thde/unamegen/releases/download/v0.3.0/unamegen_0.3.0_windows_amd64.zip",
-            "hash": "728fb78385e23f329db8190ab6761535c6bdea3907f296133fe36737a20d7342"
+            "hash": "727fc6dc5b57c153c49c7c670dced5565a19ba9a515a263779000372ce049df3"
         },
         "arm64": {
             "url": "https://github.com/thde/unamegen/releases/download/v0.3.0/unamegen_0.3.0_windows_arm64.zip",
-            "hash": "ea6f25a7dc9f533195926afc8e76149fa33fdd0a351f51b828a57bc2b0b3ca4c"
+            "hash": "7726885786b17704b3c908e7887efd07b50858f33936a561e809702409bf2958"
         }
     },
     "bin": "unamegen.exe",
