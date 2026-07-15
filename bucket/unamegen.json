@@ -1,0 +1,30 @@
+{
+    "version": "0.3.0",
+    "description": "Username generator CLI",
+    "homepage": "https://github.com/thde/unamegen",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/thde/unamegen/releases/download/v0.3.0/unamegen_0.3.0_windows_amd64.zip",
+            "hash": "728fb78385e23f329db8190ab6761535c6bdea3907f296133fe36737a20d7342"
+        },
+        "arm64": {
+            "url": "https://github.com/thde/unamegen/releases/download/v0.3.0/unamegen_0.3.0_windows_arm64.zip",
+            "hash": "ea6f25a7dc9f533195926afc8e76149fa33fdd0a351f51b828a57bc2b0b3ca4c"
+        }
+    },
+    "bin": "unamegen.exe",
+    "checkver": {
+        "github": "https://github.com/thde/unamegen"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/thde/unamegen/releases/download/v$version/unamegen_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/thde/unamegen/releases/download/v$version/unamegen_$version_windows_arm64.zip"
+            }
+        }
+    }
+}
