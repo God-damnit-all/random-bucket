@@ -1,0 +1,34 @@
+{
+    "version": "2.12",
+    "description": "A tool to unwrap paper 3D models so that you can cut and glue them together and get a real-world paper model",
+    "homepage": "https://github.com/rodrigorc/papercraft",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rodrigorc/papercraft/releases/download/v2.12/Papercraft-v2.12-win64.zip",
+            "hash": "sha256:a525e3d5503e0de1334707f8c646602ac231b0bb4289523b2684fcc55b90d8c4"
+        },
+        "32bit": {
+            "url": "https://github.com/rodrigorc/papercraft/releases/download/v2.12/Papercraft-v2.12-win32.zip",
+            "hash": "sha256:415f9fd8c22307d22a8fd284aa54381463b22bdab5b592597e8c342b73c79abb"
+        }
+    },
+    "bin": "papercraft.exe",
+    "extract_dir": "papercraft",
+    "checkver": {
+        "github": "https://github.com/rodrigorc/papercraft"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rodrigorc/papercraft/releases/download/v2.12/Papercraft-v2.12-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/rodrigorc/papercraft/releases/download/v2.12/Papercraft-v2.12-win32.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
