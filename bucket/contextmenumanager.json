@@ -1,0 +1,56 @@
+{
+    "version": "4.0.0.7",
+    "description": "A Windows 7–11 tool for managing the right-click context menu",
+    "homepage": "https://github.com/Jack251970/ContextMenuManager",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jack251970/ContextMenuManager/releases/download/4.0.0.7/ContextMenuManager.exe",
+            "hash": "sha256:841458bb733714d85f91485b1e1698de0b24f19c10791d70caca2283aaab0dc9"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ProgressPreference = 'SilentlyContinue'                                                                 ",
+            "${out_dir} = New-Item ([System.IO.Path]::Combine($persist_dir, 'Config', 'Languages')) -Type D -Force    ",
+            "${PARAM} = @{                                                                                            ",
+            "    Headers = @{                                                                                         ",
+            "        'Accept' = 'application/vnd.github.object'                                                       ",
+            "        'X-GitHub-Api-Version' = '2026-03-10'                                                            ",
+            "    }                                                                                                    ",
+            "    Uri = 'https://api.github.com/repos/Jack251970/ContextMenuManager/contents/languages'                ",
+            "}                                                                                                        ",
+            "if ($PSEdition -ne 'Core') {                                                                             ",
+            "    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12        ",
+            "    ${PARAM}.Headers['Accept-Encoding'] = 'gzip,deflate'                                                 ",
+            "}                                                                                                        ",
+            "foreach (${token} in ($env:GH_TOKEN, $env:GITHUB_TOKEN -as 'string[]' -ne '')[0]) {                      ",
+            "    ${PARAM}.Headers['Authorization'] = 'Bearer {0}' -f ${token}                                         ",
+            "}                                                                                                        ",
+            "foreach (${entry} in (Invoke-RestMethod @PARAM).entries) {                                               ",
+            "    ${PARAM}.Uri = [Uri]::EscapeUriString(${entry}.download_url)                                         ",
+            "    ${PARAM}.OutFile = [System.IO.Path]::Combine(${out_dir}, ${entry}.name -replace '[^\\x21-\\x7F]+')   ",
+            "    Invoke-WebRequest @PARAM                                                                             ",
+            "}                                                                                                        "]
+    },
+    "bin": "ContextMenuManager.exe",
+    "shortcuts": [
+        [
+            "ContextMenuManager.exe",
+            "Context Menu Manager"
+        ]
+    ],
+    "persist": [
+        "Config"
+    ],
+    "checkver": {
+        "github": "https://github.com/Jack251970/ContextMenuManager"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jack251970/ContextMenuManager/releases/download/$version/ContextMenuManager.exe"
+            }
+        }
+    }
+}
