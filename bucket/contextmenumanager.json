@@ -13,6 +13,10 @@
         "script": [
             "$ProgressPreference = 'SilentlyContinue'                                                                 ",
             "${out_dir} = New-Item ([System.IO.Path]::Combine($persist_dir, 'Config', 'Languages')) -Type D -Force    ",
+            "${ini_file} = New-Item ([System.IO.Path]::Combine($persist_dir, 'Config', 'Config.ini')) -ea 0           ",
+            "if (${ini_file}) {                                                                                       ",
+            "    Set-Content -PSPath ${ini_file} ('[General]', 'UpdateFrequency=-1') -Encoding unicode                ",
+            "}                                                                                                        ",
             "${PARAM} = @{                                                                                            ",
             "    Headers = @{                                                                                         ",
             "        'Accept' = 'application/vnd.github.object'                                                       ",
