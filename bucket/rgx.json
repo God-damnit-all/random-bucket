@@ -19,6 +19,8 @@
                 "url": "https://github.com/brevity1swos/rgx/releases/download/v$version/rgx-cli-x86_64-pc-windows-msvc.zip"
             }
         },
-        "hash": "$url.sha256"
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
 }
