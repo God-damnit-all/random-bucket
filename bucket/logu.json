@@ -1,0 +1,23 @@
+{
+    "version": "0.1.0",
+    "description": "A tool for extracting patterns from (streaming) unstructured log messages",
+    "homepage": "https://github.com/ynqa/logu",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ynqa/logu/releases/download/v0.1.0/logu-x86_64-pc-windows-msvc.zip",
+            "hash": "bc81d6d114b71b8b233339bf43799c27fd217222a30476df8783cc5b47666955"
+        }
+    },
+    "bin": "logu.exe",
+    "checkver": {
+        "github": "https://github.com/ynqa/logu"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ynqa/logu/releases/download/v$version/logu-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
