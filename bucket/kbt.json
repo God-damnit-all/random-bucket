@@ -1,0 +1,25 @@
+{
+    "version": "2.1.0",
+    "description": "Keyboard tester in terminal",
+    "homepage": "https://github.com/bloznelis/kbt",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "kbt-2.1.0-x86_64-pc-windows-gnu",
+            "url": "https://github.com/bloznelis/kbt/releases/download/2.1.0/kbt-2.1.0-x86_64-pc-windows-gnu.zip",
+            "hash": "429ae0b1caee25b70d6bafcb5ac506b76f3bb430677dec3f86ae26e970656ebb"
+        }
+    },
+    "bin": "kbt.exe",
+    "checkver": {
+        "github": "https://github.com/bloznelis/kbt"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "kbt-$version-x86_64-pc-windows-gnu",
+                "url": "https://github.com/bloznelis/kbt/releases/download/$version/kbt-$version-x86_64-pc-windows-gnu.zip"
+            }
+        }
+    }
+}
