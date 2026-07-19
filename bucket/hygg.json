@@ -1,0 +1,23 @@
+{
+    "version": "0.1.26",
+    "description": "Minimalistic Vim-like TUI document reader, supporting PDF, EPUB, DOCX, and many more formats via pandoc",
+    "homepage": "https://github.com/kruseio/hygg",
+    "license": "AGPL-3.0-or-later|Apache-2.0|Elastic-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kruseio/hygg/releases/download/0.1.26/hygg-cli-0.1.26-x86_64-windows.zip",
+            "hash": "sha256:576f5fed85aef7029bc415342904e6248996bd3f7df98379c7b3fbadbe1f4a17"
+        }
+    },
+    "bin": "hygg.exe",
+    "checkver": {
+        "github": "https://github.com/kruseio/hygg"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kruseio/hygg/releases/download/$version/hygg-cli-$version-x86_64-windows.zip"
+            }
+        }
+    }
+}
