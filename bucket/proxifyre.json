@@ -1,31 +1,27 @@
 {
-    "version": "2.3.0",
+    "version": "2.4.0",
     "description": "A SOCKS5 proxifier leveraging NDISAPI to transparently route TCP and UDP traffic on a per-app basis",
     "homepage": "https://github.com/wiresock/proxifyre",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-x64.zip",
-            "hash": "sha256:82be1118968fb28ec8fc3fca1437a69094ea8fab12875c76d0429de8b8f6fd24"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x64.zip",
+            "hash": "b679fa74f56681d9fbd8e4fe71ba732c778ad1fd93c4b9062fabe57acb724c02"
         },
         "32bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-x86.zip",
-            "hash": "sha256:21c3a7c3a02d45f053e99272a3dfe7be80712ccaba817268df6c3e118ae4561b"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x86.zip",
+            "hash": "e03abfe71ee938d3891f2539f96d0e531ca2aaa409ee780d1336232e3c077473"
         },
         "arm64": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.3.0/ProxiFyre-v2.3.0-ARM64.zip",
-            "hash": "sha256:55cf1d0323b869f50c2c61c4363128fb4f6fb030a482eb1e2ca0f6a2a50fc91d"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-ARM64.zip",
+            "hash": "bd4ec16b8a3ac44296b816b89fcbed9a97a8ae79cf54110a8e7f56485d7bd7f4"
         }
     },
     "installer": {
-        "script": [
-            "[void](New-Item ([System.IO.Path]::Combine($persist_dir, 'app-config.json')) -Force)"
-        ]
+        "script": "[void](New-Item ([System.IO.Path]::Combine($persist_dir, 'app-config.json')) -Force)"
     },
     "bin": "ProxiFyre.exe",
-    "persist": [
-        "app-config.json"
-    ],
+    "persist": "app-config.json",
     "checkver": {
         "github": "https://github.com/wiresock/proxifyre"
     },
