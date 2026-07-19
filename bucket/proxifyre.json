@@ -17,7 +17,15 @@
             "hash": "sha256:55cf1d0323b869f50c2c61c4363128fb4f6fb030a482eb1e2ca0f6a2a50fc91d"
         }
     },
+    "installer": {
+        "script": [
+            "[void](New-Item ([System.IO.Path]::Combine($persist_dir, 'app-config.json')) -Force)"
+        ]
+    },
     "bin": "ProxiFyre.exe",
+    "persist": [
+        "app-config.json"
+    ],
     "checkver": {
         "github": "https://github.com/wiresock/proxifyre"
     },
