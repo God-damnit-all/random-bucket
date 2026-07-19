@@ -1,0 +1,25 @@
+{
+    "version": "3.2.0",
+    "description": "A diff TUI for that updates according to changes being made to the watched files in real time",
+    "homepage": "https://github.com/SoCkEt7/Livediff",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "livediff-v3.2.0-x86_64-pc-windows-msvc",
+            "url": "https://github.com/SoCkEt7/Livediff/releases/download/v3.2.0/livediff-v3.2.0-x86_64-pc-windows-msvc.zip",
+            "hash": "sha256:89568e85edb1905d2b90deee28518c9b77c273477ceb92dbec7ef460397b8c0a"
+        }
+    },
+    "bin": "livediff.exe",
+    "checkver": {
+        "github": "https://github.com/SoCkEt7/Livediff"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "livediff-v$version-x86_64-pc-windows-msvc",
+                "url": "https://github.com/SoCkEt7/Livediff/releases/download/v$version/livediff-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
