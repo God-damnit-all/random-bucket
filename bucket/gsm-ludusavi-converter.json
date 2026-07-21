@@ -17,7 +17,7 @@
         "script": "Set-Content -PSPath $dir\\gsm_ludusavi_converter.bat '@%~dpn0.exe --no-gui %*'"
     },
     "shortcuts": [
-        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi-converter" ]
+        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi Converter" ]
     ],
     "bin": [
         [ "gsm_ludusavi_converter.bat", "gsm_ludusavi_converter" ],
