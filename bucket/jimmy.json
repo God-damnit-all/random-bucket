@@ -1,0 +1,23 @@
+{
+    "version": "1.1.27",
+    "description": "Convert your notes to Markdown; compatible with Joplin, Obsidian, and more",
+    "homepage": "https://github.com/marph91/jimmy",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/marph91/jimmy/releases/download/v1.1.27/jimmy-windows.exe",
+            "hash": "sha256:59470c2bad859b266b6aa30e977f1547026f2f0bd18146bd04163e0d1fdcc262"
+        }
+    },
+    "bin": [ ["jimmy-windows.exe", "jimmy" ] ],
+    "checkver": {
+        "github": "https://github.com/marph91/jimmy"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/marph91/jimmy/releases/download/v$version/jimmy-windows.exe"
+            }
+        }
+    }
+}
