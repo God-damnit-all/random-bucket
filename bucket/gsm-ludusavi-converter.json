@@ -4,7 +4,7 @@
     "notes": [
         "The gsm_ludusavi_converter/gsm-ludusavi-converter shims automatically include `--no-gui` as a parameter for CLI use",
         "Parameters can be found here: https://github.com/jose-l-martins/GSM-Ludusavi-converter#command-line-cli"
-    ]
+    ],
     "homepage": "https://github.com/jose-l-martins/GSM-Ludusavi-converter",
     "license": "MIT",
     "architecture": {
