@@ -1,0 +1,23 @@
+{
+    "version": "1.0.3",
+    "description": "A program that creates large characters out of ordinary screen characters",
+    "homepage": "https://github.com/Ace-Radom/figlet4win",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Ace-Radom/figlet4win/releases/download/1.0.3/figlet4win-portable-full-1.0.3-win64.zip",
+            "hash": "sha256:6213141892d2f6ee50d19a9b519094bd21d193fdf95d380fad6a1ea431a7eab7"
+        }
+    },
+    "bin": [ "chkfont.exe", "figinstall.exe", "figlet.exe", "figlist.bat", "figman.bat", "showfigfonts.bat" ],
+    "checkver": {
+        "github": "https://github.com/Ace-Radom/figlet4win"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Ace-Radom/figlet4win/releases/download/$version/figlet4win-portable-full-$version-win64.zip"
+            }
+        }
+    }
+}
