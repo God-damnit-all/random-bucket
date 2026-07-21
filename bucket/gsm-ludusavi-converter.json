@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "description": "A tool to convert the game save backup files created by GameSave Manager to files for another game save backup tool called Ludusavi (and vice-versa)",
+    "homepage": "https://github.com/jose-l-martins/GSM-Ludusavi-converter",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jose-l-martins/GSM-Ludusavi-converter/releases/download/v2.0.0/gsm_ludusavi_converter_win64.zip",
+            "hash": "sha256:7d0438c2558d172a35c2bb30b6dca8d0b0b171d5f920fb5f7a6d53e487680ca7"
+        }
+    },
+    "bin": [ "gsm_ludusavi_converter.exe", [ "gsm_ludusavi_converter.exe", "gsm-ludusavi-converter" ] ],
+    "checkver": {
+        "github": "https://github.com/jose-l-martins/GSM-Ludusavi-converter"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jose-l-martins/GSM-Ludusavi-converter/releases/download/v$version/gsm_ludusavi_converter_win64.zip"
+            }
+        }
+    }
+}
