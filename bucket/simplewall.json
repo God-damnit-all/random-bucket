@@ -15,6 +15,9 @@
             "hash": "f3ad159127b154d447f35056a4f81e256cfef2379cf55689da0da4aa768c9ac6"
         }
     },
+    "shortcuts": [
+        [ "simplewall.exe", "simplewall" ]
+    ],
     "bin": "simplewall.exe",
     "persist": "simplewall.ini",
     "checkver": {
