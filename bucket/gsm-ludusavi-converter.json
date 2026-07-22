@@ -16,8 +16,8 @@
     },
     "installer": {
         "script": [
-            "[void](New-Item $persist_dir\\app.log -Force)",
-            "[void](New-Item $persist_dir\\config.yaml -Force)",
+            "[void](New-Item $persist_dir\\app.log -ea 0)",
+            "[void](New-Item $persist_dir\\config.yaml -ea 0)",
             "$script = @'",
             "@ECHO OFF & PUSHD \"%~dp0\"",
             "{0} %*",
