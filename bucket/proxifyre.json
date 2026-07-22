@@ -18,7 +18,7 @@
         }
     },
     "installer": {
-        "script": "[void](New-Item ([System.IO.Path]::Combine($persist_dir, 'app-config.json')) -Force)"
+        "script": "[void](New-Item ([System.IO.Path]::Combine($persist_dir, 'app-config.json')) -ea 0)"
     },
     "bin": "ProxiFyre.exe",
     "persist": "app-config.json",
