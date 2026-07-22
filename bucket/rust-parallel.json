@@ -1,0 +1,23 @@
+{
+    "version": "1.23.0",
+    "description": "Fast CLI app to run commands in parallel with a similar interface to GNU parallel or xargs",
+    "homepage": "https://github.com/aaronriekenberg/rust-parallel",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/aaronriekenberg/rust-parallel/releases/download/v1.23.0/rust-parallel-x86_64-pc-windows-msvc.zip",
+            "hash": "sha256:a698f25257d04bca23caeb6392ff3492a7edfac36f0498e2bc792f6b7797b7b2"
+        }
+    },
+    "bin": "rust-parallel.exe",
+    "checkver": {
+        "github": "https://github.com/aaronriekenberg/rust-parallel"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/aaronriekenberg/rust-parallel/releases/download/v$version/rust-parallel-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
