@@ -36,7 +36,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-$version-checksums.txt
+            "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-$version-checksums.txt"
         }
     }
 }
