@@ -17,15 +17,15 @@
         "script": [
             "[void](New-Item $persist_dir\\app.log -Force)",
             "[void](New-Item $persist_dir\\config.yaml -Force)",
-            "Set-Content -PSPath $dir\\gsm_ludusavi_converter.bat '@%~dpn0.exe --no-gui %*'"
+            "Set-Content -PSPath $dir\\gsm_ludusavi_converter.cmd '@%~dpn0.exe --no-gui %*'"
         ]
     },
     "shortcuts": [
         [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi-converter" ]
     ],
     "bin": [
-        [ "gsm_ludusavi_converter.bat", "gsm_ludusavi_converter" ],
-        [ "gsm_ludusavi_converter.bat", "gsm-ludusavi-converter" ]
+        [ "gsm_ludusavi_converter.cmd", "gsm_ludusavi_converter" ],
+        [ "gsm_ludusavi_converter.cmd", "gsm-ludusavi-converter" ]
     ],
     "persist": [ "app.log", "config.yaml" ]
     "checkver": {
