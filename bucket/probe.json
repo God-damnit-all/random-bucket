@@ -1,0 +1,37 @@
+{
+    "version": "0.0.3",
+    "description": "Simplified integration testing through the use of YAML and jq",
+    "homepage": "https://github.com/abhimanyu003/probe",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/abhimanyu003/probe/releases/download/v0.0.3/probe_0.0.3_windows_amd64.tar.gz",
+            "hash": "57dfc4be1ad9eafcf7ec67079faef8a0359d1f08549f6db8bea3ee72fd9df910"
+        },
+        "32bit": {
+            "url": "https://github.com/abhimanyu003/probe/releases/download/v0.0.3/probe_0.0.3_windows_386.tar.gz",
+            "hash": "ad4927ac0fe002d1aec48e44feda2e057b27dfffc7f64f6bf8b4fdfe1996f74c"
+        },
+        "arm64": {
+            "url": "https://github.com/abhimanyu003/probe/releases/download/v0.0.3/probe_0.0.3_windows_arm64.tar.gz",
+            "hash": "b316fece55843549ea0eabb345bc7ed08e9fdfdc1c0c58ee533dcd0926d7f662"
+        }
+    },
+    "bin": "probe.exe",
+    "checkver": {
+        "github": "https://github.com/abhimanyu003/probe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/abhimanyu003/probe/releases/download/v$version/probe_$version_windows_amd64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/abhimanyu003/probe/releases/download/v$version/probe_$version_windows_386.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/abhimanyu003/probe/releases/download/v$version/probe_$version_windows_arm64.tar.gz"
+            }
+        }
+    }
+}
