@@ -36,7 +36,9 @@
         }
     },
     "checkver": {
-        "github": "https://github.com/wabarc/wayback"
+        "url": "https://api.github.com/repos/wabarc/wayback/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
