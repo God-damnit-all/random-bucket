@@ -34,7 +34,7 @@
             "arm64": {
                 "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-windows-arm64-$version.zip"
             }
-        }
+        },
         "hash": {
             "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-$version-checksums.txt
         }
