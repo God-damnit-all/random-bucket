@@ -1,0 +1,23 @@
+{
+    "description": "A TUI utility to search and replace text — with a focus on ergonomics, speed, and case-awareness in source code",
+    "homepage": "https://github.com/beeb/swpui",
+    "license": "Apache-2.0|MIT",
+    "version": "0.10.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/beeb/swpui/releases/download/v0.10.0/swpui-x86_64-pc-windows-msvc.zip",
+            "hash": "0fa6199543a907d4ed95766cec1cb4ce1c0d2866c635c9ab0b98ec9f0708ee21"
+        }
+    },
+    "bin": "swp.exe",
+    "checkver": {
+        "github": "https://github.com/beeb/swpui"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/beeb/swpui/releases/download/v$version/swpui-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
