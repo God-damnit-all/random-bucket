@@ -2,8 +2,8 @@
     "version": "2.0.0",
     "description": "A tool to convert the game save backup files created by GameSave Manager to files for another game save backup tool called Ludusavi (and vice-versa)",
     "notes": [
-        "The `gsm_ludusavi_converter_cli/`gsm-ludusavi-converter-cli` shims automatically include `--no-gui` as a parameter.",
-        "The `gsm_ludusavi_converter_gui/`gsm-ludusavi-converter-gui` shims automatically include `--gui` as a parameter.",
+        "The `gsm_ludusavi_converter_cli`/`gsm-ludusavi-converter-cli` shims automatically include `--no-gui` as a parameter.",
+        "The `gsm_ludusavi_converter_gui`/`gsm-ludusavi-converter-gui` shims automatically include `--gui` as a parameter.",
         "Parameters can be found here: https://github.com/jose-l-martins/GSM-Ludusavi-converter#command-line-cli"
     ],
     "homepage": "https://github.com/jose-l-martins/GSM-Ludusavi-converter",
