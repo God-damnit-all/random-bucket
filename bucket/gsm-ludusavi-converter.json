@@ -21,7 +21,7 @@
         ]
     },
     "shortcuts": [
-        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi-converter" ]
+        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi Converter" ]
     ],
     "bin": [
         [ "gsm_ludusavi_converter.cmd", "gsm_ludusavi_converter" ],
