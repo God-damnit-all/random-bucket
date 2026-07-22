@@ -15,6 +15,9 @@
             "hash": "f3ad159127b154d447f35056a4f81e256cfef2379cf55689da0da4aa768c9ac6"
         }
     },
+    "installer": {
+        "script": "[void](New-Item $persist_dir\\simplewall.ini -ea 0)"
+    },
     "shortcuts": [
         [ "simplewall.exe", "simplewall" ]
     ],
