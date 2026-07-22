@@ -10,6 +10,7 @@ on:
 jobs:
   changes:
     if: ${{ github.actor != 'dependabot[bot]' }}
+    name: Check for bucket manifest changes
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
@@ -26,7 +27,7 @@ jobs:
   test:
     needs: changes
     if: ${{ needs.changes.outputs.bucket == 'true' }}
-    name: Test
+    name: Test manifests
     runs-on: windows-latest
     strategy:
       matrix:
