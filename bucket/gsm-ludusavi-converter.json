@@ -2,7 +2,8 @@
     "version": "2.0.0",
     "description": "A tool to convert the game save backup files created by GameSave Manager to files for another game save backup tool called Ludusavi (and vice-versa)",
     "notes": [
-        "The gsm_ludusavi_converter/gsm-ludusavi-converter shims automatically include `--no-gui` as a parameter for CLI use",
+        "The `gsm_ludusavi_converter_cli/`gsm-ludusavi-converter-cli` shims automatically include `--no-gui` as a parameter.",
+        "The `gsm_ludusavi_converter_gui/`gsm-ludusavi-converter-gui` shims automatically include `--gui` as a parameter.",
         "Parameters can be found here: https://github.com/jose-l-martins/GSM-Ludusavi-converter#command-line-cli"
     ],
     "homepage": "https://github.com/jose-l-martins/GSM-Ludusavi-converter",
@@ -17,7 +18,9 @@
         "script": [
             "[void](New-Item $persist_dir\\app.log -Force)",
             "[void](New-Item $persist_dir\\config.yaml -Force)",
-            "Set-Content -PSPath $dir\\gsm_ludusavi_converter.cmd '@\"%~dpn0.exe\" --no-gui %*'"
+            "Set-Content -PSPath $dir\\gsm_ludusavi_converter.cmd '@\"%~dpn0.exe\" %*'",
+            "Set-Content -PSPath $dir\\gsm_ludusavi_converter_cli.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --no-gui %*'",
+            "Set-Content -PSPath $dir\\gsm_ludusavi_converter_gui.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --gui %*'"
         ]
     },
     "shortcuts": [
@@ -25,9 +28,16 @@
     ],
     "bin": [
         [ "gsm_ludusavi_converter.cmd", "gsm_ludusavi_converter" ],
-        [ "gsm_ludusavi_converter.cmd", "gsm-ludusavi-converter" ]
+        [ "gsm_ludusavi_converter.cmd", "gsm-ludusavi-converter" ],
+        [ "gsm_ludusavi_converter_cli.cmd", "gsm_ludusavi_converter_cli" ],
+        [ "gsm_ludusavi_converter_cli.cmd", "gsm-ludusavi-converter-cli" ],
+        [ "gsm_ludusavi_converter_gui.cmd", "gsm_ludusavi_converter_gui" ],
+        [ "gsm_ludusavi_converter_gui.cmd", "gsm-ludusavi-converter-gui" ]
     ],
-    "persist": [ "app.log", "config.yaml" ],
+    "persist": [
+        "app.log",
+        "config.yaml"
+    ],
     "checkver": {
         "github": "https://github.com/jose-l-martins/GSM-Ludusavi-converter"
     },
