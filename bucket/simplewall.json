@@ -17,7 +17,7 @@
     },
     "installer": {
         "script": [
-            "[void](New-Item $persist_dir -Force)",
+            "[void](New-Item $persist_dir -Type D -Force)",
             "[void](New-Item $persist_dir\\simplewall.ini -ea 0)"
         ]
     },
