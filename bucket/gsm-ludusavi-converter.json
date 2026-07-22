@@ -15,6 +15,7 @@
     },
     "installer": {
         "script": [
+            "[void](New-Item $persist_dir\\app.log -Force)",
             "[void](New-Item $persist_dir\\config.yaml -Force)",
             "Set-Content -PSPath $dir\\gsm_ludusavi_converter.bat '@%~dpn0.exe --no-gui %*'"
         ]
