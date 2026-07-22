@@ -5,16 +5,16 @@
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x64.zip",
-            "hash": "b679fa74f56681d9fbd8e4fe71ba732c778ad1fd93c4b9062fabe57acb724c02"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x64-signed.zip",
+            "hash": "sha256:eab65fd7d8eeb716abedb5614618c641de3f9eb8326b99cee1da787141e30cac"
         },
         "32bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x86.zip",
-            "hash": "e03abfe71ee938d3891f2539f96d0e531ca2aaa409ee780d1336232e3c077473"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-x86-signed.zip",
+            "hash": "sha256:b7fa324e8ea4de5b52fc143902f2f2c8f3ef77e06b262e777f762b0851489764"
         },
         "arm64": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-ARM64.zip",
-            "hash": "bd4ec16b8a3ac44296b816b89fcbed9a97a8ae79cf54110a8e7f56485d7bd7f4"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.4.0/ProxiFyre-v2.4.0-ARM64-signed.zip",
+            "hash": "sha256:2d8c5b019eb96a0b3ca7dbe9802d19e6f1958d2e29af20e7f785dbf64e704c2d"
         }
     },
     "installer": {
@@ -28,13 +28,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x64.zip"
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x64-signed.zip"
             },
             "32bit": {
-                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x86.zip"
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x86-signed.zip"
             },
             "arm64": {
-                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-ARM64.zip"
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-ARM64-signed.zip"
             }
         }
     }
