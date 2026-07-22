@@ -27,7 +27,7 @@
         [ "gsm_ludusavi_converter.bat", "gsm_ludusavi_converter" ],
         [ "gsm_ludusavi_converter.bat", "gsm-ludusavi-converter" ]
     ],
-    "persist": "config.yaml",
+    "persist": [ "app.log", "config.yaml" ]
     "checkver": {
         "github": "https://github.com/jose-l-martins/GSM-Ludusavi-converter"
     },
