@@ -3,13 +3,28 @@ name: CI
 on:
   push:
     branches:
-      - 'main'
-      - 'master'
+    - main
   pull_request:
   workflow_dispatch:
 
 jobs:
+  changes:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      bucket: ${{ steps.filter.outputs.bucket }}
+    steps:
+    - uses: dorny/paths-filter@v4
+      id: filter
+      with:
+        filters: |
+          bucket:
+          - bucket/**
   test:
+    needs: changes
+    if: ${{ needs.changes.outputs.bucket == 'true' }}
     name: Test
     runs-on: windows-latest
     strategy:
@@ -19,23 +34,27 @@ jobs:
       run:
         shell: ${{ matrix.shell }}
     steps:
-      - name: Checkout Bucket
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      -
+        name: Checkout Bucket
+        uses: actions/checkout@v7
         with:
           # Need at least 2 commits to properly gather changed files for linting
           fetch-depth: 2
-          path: 'my_bucket'
-      - name: Checkout Scoop
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+          path: my_bucket
+      -
+        name: Checkout Scoop
+        uses: actions/checkout@v7
         with:
           repository: ScoopInstaller/Scoop
-          path: 'scoop_core'
-      - name: Install and cache test dependencies
-        uses: potatoqualitee/psmodulecache@ee5e9494714abf56f6efbfa51527b2aec5c761b8 # v6.2.1
+          path: scoop_core
+      -
+        name: Install and cache test dependencies
+        uses: potatoqualitee/psmodulecache@v6.3
         with:
           modules-to-cache: BuildHelpers, Pester
           shell: ${{ matrix.shell }}
-      - name: Run tests
+      -
+        name: Run tests
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
           .\my_bucket\bin\test.ps1
