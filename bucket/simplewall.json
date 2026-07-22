@@ -1,0 +1,35 @@
+{
+    "version": "3.9.1",
+    "description": "A simple firewall tool for configuring Windows Filtering Platform (WFP) to control network activity",
+    "homepage": "https://github.com/henrypp/simplewall",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "simplewall\\64",
+            "url": "https://github.com/henrypp/simplewall/releases/download/v.3.9.1/simplewall-3.9.1-bin.7z",
+            "hash": "f3ad159127b154d447f35056a4f81e256cfef2379cf55689da0da4aa768c9ac6"
+        },
+        "arm64": {
+            "extract_dir": "simplewall\\ARM64",
+            "url": "https://github.com/henrypp/simplewall/releases/download/v.3.9.1/simplewall-3.9.1-bin.7z",
+            "hash": "f3ad159127b154d447f35056a4f81e256cfef2379cf55689da0da4aa768c9ac6"
+        }
+    },
+    "bin": "simplewall.exe",
+    "persist": "simplewall.ini",
+    "checkver": {
+        "url": "https://api.github.com/repos/henrypp/simplewall/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "(\\d[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/henrypp/simplewall/releases/download/v.$version/simplewall-$version-bin.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/henrypp/simplewall/releases/download/v.$version/simplewall-$version-bin.7z"
+            }
+        }
+    }
+}
