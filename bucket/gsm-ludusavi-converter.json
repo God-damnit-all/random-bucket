@@ -2,8 +2,8 @@
     "version": "2.0.0",
     "description": "A tool to convert the game save backup files created by GameSave Manager to files for another game save backup tool called Ludusavi (and vice-versa)",
     "notes": [
-        "The gsm_ludusavi_converter/gsm-ludusavi-converter shims automatically include `--no-gui` as a parameter for CLI use,",
-        "CLI parameters can be found here: https://github.com/jose-l-martins/GSM-Ludusavi-converter#command-line-cli"
+        "The gsm_ludusavi_converter/gsm-ludusavi-converter shims automatically include `--no-gui` as a parameter for CLI use",
+        "Parameters can be found here: https://github.com/jose-l-martins/GSM-Ludusavi-converter#command-line-cli"
     ],
     "homepage": "https://github.com/jose-l-martins/GSM-Ludusavi-converter",
     "license": "MIT",
@@ -14,15 +14,19 @@
         }
     },
     "installer": {
-        "script": "Set-Content -PSPath $dir\\gsm_ludusavi_converter.bat '@%~dpn0.exe --no-gui %*'"
+        "script": [
+            "[void](New-Item $persist_dir\\config.yaml -Force)",
+            "Set-Content -PSPath $dir\\gsm_ludusavi_converter.bat '@%~dpn0.exe --no-gui %*'"
+        ]
     },
     "shortcuts": [
-        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi Converter" ]
+        [ "gsm_ludusavi_converter.exe", "GSM-Ludusavi-converter" ]
     ],
     "bin": [
         [ "gsm_ludusavi_converter.bat", "gsm_ludusavi_converter" ],
         [ "gsm_ludusavi_converter.bat", "gsm-ludusavi-converter" ]
     ],
+    "persist": "config.yaml",
     "checkver": {
         "github": "https://github.com/jose-l-martins/GSM-Ludusavi-converter"
     },
