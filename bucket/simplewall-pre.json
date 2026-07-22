@@ -22,7 +22,7 @@
         ]
     },
     "shortcuts": [
-        [ "simplewall.exe", "simplewall" ]
+        [ "simplewall.exe", "simplewall (Preview)" ]
     ],
     "bin": "simplewall.exe",
     "persist": "simplewall.ini",
