@@ -7,7 +7,7 @@
         "64bit": {
             "bin": [ [ "astroterm-win-x86_64.exe", "astroterm" ] ],
             "url": "https://github.com/da-luce/astroterm/releases/download/v1.2.0/astroterm-win-x86_64.exe",
-            "hash": "sha256:576f5fed85aef7029bc415342904e6248996bd3f7df98379c7b3fbadbe1f4a17"
+            "hash": "397b3b9d61ae1d744cbcd2906985e8fcfd5dc13f3b2391ee56fda1c589b080b4"
         }
     },
     "checkver": {
