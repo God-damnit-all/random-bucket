@@ -1,12 +1,12 @@
 {
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "Host These Things Please - a basic http server for hosting a folder fast and simply",
     "homepage": "https://github.com/thecoshman/http",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/thecoshman/http/releases/download/v2.5.0/http-v2.5.0.exe#/http.exe",
-            "hash": "sha256:5f349a25202a90142c0c710f02fc810cf64a5a01e30acbe1576d14ff455ae497"
+            "url": "https://github.com/thecoshman/http/releases/download/v2.6.0/http-v2.6.0.exe#/http.exe",
+            "hash": "bfb072305f7e3f0005ff172ea6c4c691396929242d5c8df5ac395234d59aa60b"
         }
     },
     "bin": "http.exe",
