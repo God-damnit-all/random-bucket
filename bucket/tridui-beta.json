@@ -1,0 +1,35 @@
+{
+    "version": "1.1.3-beta",
+    "description": "A lightweight desktop application that provides a friendly UI for TrID, a powerful tool for scanning and analyzing files",
+    "homepage": "https://github.com/JMcrafter26/TridUI",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "bin": [ [ "TridUI-win-amd64.exe", "TridUI" ] ],
+            "shortcuts": [ [ "TridUI-win-amd64.exe", "TridUI" ] ],
+            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.1.3-beta/TridUI-win-amd64.exe",
+            "hash": "67bd418c3345fcf66d5231fc171fe59ad904fdde4c92a3736cccdf52f61be994"
+        },
+        "arm64": {
+            "bin": [ [ "TridUI-win-arm64.exe", "TridUI" ] ],
+            "shortcuts": [ [ "TridUI-win-arm64.exe", "TridUI" ] ],
+            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.1.3-beta/TridUI-win-arm64.exe",
+            "hash": "60d0037d21b94846677444a0e3246f0618f8dfdd119b7b77878789948a91bb89"
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/JMcrafter26/TridUI/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "(\\d[\\d.]+-beta)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JMcrafter26/TridUI/releases/download/v$version/TridUI-win-amd64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/JMcrafter26/TridUI/releases/download/v$version/TridUI-win-arm64.exe"
+            }
+        }
+    }
+}
