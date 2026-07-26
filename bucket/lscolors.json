@@ -15,7 +15,7 @@
             "hash": "81803a03cc115f587242ec852b83f8d528f1ed0b23ca3160b3d24455c7987501"
         }
     },
-    "bin": "gtree.exe",
+    "bin": "lscolors.exe",
     "checkver": {
         "github": "https://github.com/sharkdp/lscolors"
     },
