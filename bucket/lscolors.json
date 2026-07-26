@@ -1,0 +1,34 @@
+{
+    "version": "0.21.0",
+    "description": "A tool for colorizing pipeline output according to the LS_COLORS environment variable (like `ls`)",
+    "homepage": "https://github.com/sharkdp/lscolors",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "lscolors-v0.21.0-x86_64-pc-windows-msvc",
+            "url": "https://github.com/sharkdp/lscolors/releases/download/v0.21.0/lscolors-v0.21.0-x86_64-pc-windows-msvc.zip",
+            "hash": "b5dd8f24e7add12fd0a32ff00e03c898eeb1b4c4b7ed629002e9bc1b855cae8b"
+        },
+        "32bit": {
+            "extract_dir": "lscolors-v0.21.0-i686-pc-windows-msvc",
+            "url": "https://github.com/sharkdp/lscolors/releases/download/v0.21.0/lscolors-v0.21.0-i686-pc-windows-msvc.zip",
+            "hash": "81803a03cc115f587242ec852b83f8d528f1ed0b23ca3160b3d24455c7987501"
+        }
+    },
+    "bin": "gtree.exe",
+    "checkver": {
+        "github": "https://github.com/sharkdp/lscolors"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "lscolors-v$version-x86_64-pc-windows-msvc",
+                "url": "https://github.com/sharkdp/lscolors/releases/download/v$version/lscolors-v$version-x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "extract_dir": "lscolors-v$version-i686-pc-windows-msvc",
+                "url": "https://github.com/sharkdp/lscolors/releases/download/v$version/lscolors-v$version-i686-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
