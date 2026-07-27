@@ -1,20 +1,40 @@
 {
-    "version": "1.1.2",
+    "version": "1.2.0",
     "description": "A lightweight desktop application that provides a friendly UI for TrID, a powerful tool for scanning and analyzing files",
     "homepage": "https://github.com/JMcrafter26/TridUI",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "bin": [ [ "TridUI-win-amd64.exe", "TridUI" ] ],
-            "shortcuts": [ [ "TridUI-win-amd64.exe", "TridUI" ] ],
-            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.1.2/TridUI-win-amd64.exe",
-            "hash": "f6bae318ffe3dfe8a6f09a0f1224215c77f50413b341d89f729c0a965c7e17fb"
+            "bin": [
+                [
+                    "TridUI-win-amd64.exe",
+                    "TridUI"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "TridUI-win-amd64.exe",
+                    "TridUI"
+                ]
+            ],
+            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.2.0/TridUI-win-amd64.exe",
+            "hash": "010d24cf6faff4aef387d680bf5873069c141fd8d973d612de21e0a1a32e8a4c"
         },
         "arm64": {
-            "bin": [ [ "TridUI-win-arm64.exe", "TridUI" ] ],
-            "shortcuts": [ [ "TridUI-win-arm64.exe", "TridUI" ] ],
-            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.1.2/TridUI-win-arm64.exe",
-            "hash": "96a1685b5309d6c59b292f3a10b12e293f8643933080f7622b4b466b1b106d85"
+            "bin": [
+                [
+                    "TridUI-win-arm64.exe",
+                    "TridUI"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "TridUI-win-arm64.exe",
+                    "TridUI"
+                ]
+            ],
+            "url": "https://github.com/JMcrafter26/TridUI/releases/download/v1.2.0/TridUI-win-arm64.exe",
+            "hash": "8f92ba6023c05617c724ead51fe943005b0c925424f6a78392ff130759b501c7"
         }
     },
     "checkver": {
