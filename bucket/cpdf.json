@@ -15,8 +15,8 @@
     },
     "installer": {
         "script": [
-            "Move-Item -PSPath Windows-$architecture/cpdf.exe $dir/cpdf.exe",
-            "Get-ChildItem -ad | Remove-Item -Recurse -WhatIf"
+            "Move-Item -PSPath $dir/Windows-$architecture/cpdf.exe $dir/cpdf.exe",
+            "Get-ChildItem -PSPath $dir -ad | Remove-Item -Recurse -WhatIf"
         ]
     },
     "bin": "cpdf.exe",
