@@ -19,6 +19,7 @@
             "Get-ChildItem -PSPath $dir -ad"
         ]
     },
+    "extract_dir": "cpdf-binaries-master",
     "bin": "cpdf.exe",
     "checkver": {
         "url": "https://api.github.com/repos/coherentgraphics/cpdf-binaries/tags",
