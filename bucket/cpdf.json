@@ -5,18 +5,18 @@
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
+            "url": "https://codeload.github.com/coherentgraphics/cpdf-binaries/zip/refs/heads/master#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
             "hash": "de9517e888dea0e3cdc627a2c7cd5bf4f4124aa276e0afd9aed9579027849936"
         },
         "32bit": {
-            "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
+            "url": "https://codeload.github.com/coherentgraphics/cpdf-binaries/zip/refs/heads/master#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
             "hash": "de9517e888dea0e3cdc627a2c7cd5bf4f4124aa276e0afd9aed9579027849936"
         }
     },
     "installer": {
         "script": [
-            "Move-Item -PSPath $dir/Windows-$architecture/cpdf.exe $dir/cpdf.exe",
-            "Get-ChildItem -PSPath $dir -ad | Remove-Item -Recurse"
+            "Move-Item -PSPath Windows-$architecture/cpdf.exe $dir/cpdf.exe",
+            "Get-ChildItem -ad | Remove-Item -Recurse"
         ]
     },
     "bin": "cpdf.exe",
@@ -27,10 +27,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/$version.zip"
+                "url": "https://codeload.github.com/coherentgraphics/cpdf-binaries/zip/refs/heads/master#/$version.zip"
             },
             "32bit": {
-                "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/$version.zip"
+                "url": "https://codeload.github.com/coherentgraphics/cpdf-binaries/zip/refs/heads/master#/$version.zip"
             }
         }
     }
