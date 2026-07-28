@@ -1,0 +1,37 @@
+{
+    "version": "2.9.1",
+    "description": "Coherent PDF Command Line Tools is a powerful cross-platform utility used to modify, merge, split, encrypt, and manipulate PDFs without quality loss",
+    "homepage": "https://github.com/coherentgraphics/cpdf-binaries",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
+            "hash": "daceacaa3ffc6626fec8a2540312f2e419f380b31f0517d5a0fc03fd39e89860"
+        },
+        "32bit": {
+            "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
+            "hash": "sha256:29b08e7c872e2487bfcbc6a63912f92384385cd8cfa453953ab1c10a1e9988a6"
+        }
+    },
+    "installer": {
+        "script": [
+            "Move-Item -PSPath Windows-$architecture/cpdf.exe $dir/cpdf.exe",
+            "Get-ChildItem -ad | Remove-Item -Recurse"
+        ]
+    },
+    "bin": "cpdf.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/coherentgraphics/cpdf-binaries/tags",
+        "regex": "^.+?v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/$version.zip"
+            }
+        }
+    }
+}
