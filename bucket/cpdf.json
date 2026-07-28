@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
-            "hash": "daceacaa3ffc6626fec8a2540312f2e419f380b31f0517d5a0fc03fd39e89860"
+            "hash": "de9517e888dea0e3cdc627a2c7cd5bf4f4124aa276e0afd9aed9579027849936"
         },
         "32bit": {
             "url": "https://github.com/coherentgraphics/cpdf-binaries/archive/master.zip#/305f0ca52aac812b6fdfed318362f668bf1d8be1.zip",
-            "hash": "sha256:29b08e7c872e2487bfcbc6a63912f92384385cd8cfa453953ab1c10a1e9988a6"
+            "hash": "de9517e888dea0e3cdc627a2c7cd5bf4f4124aa276e0afd9aed9579027849936"
         }
     },
     "installer": {
