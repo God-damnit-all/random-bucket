@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0-alpha.1",
+    "description": "A CLI tool for vectorizing raster images (e.g. JPG, PNG) to convert them into into SVG files",
+    "homepage": "https://github.com/visioncortex/vtracer",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/visioncortex/vtracer/releases/download/1.0.0-alpha.1/vtracer-x86_64-pc-windows-msvc.zip",
+            "hash": "a97b8b2ff80419d9fb59cef704a1f9beb6bd66f850761ef632e59bd506cffd79"
+        }
+    },
+    "bin": "vtracer.exe",
+    "checkver": {
+        "github": "https://github.com/visioncortex/vtracer"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/visioncortex/vtracer/releases/download/$version/vtracer-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
