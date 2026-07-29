@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "description": "Skillful man page to JSON/Markdown converter — human readable, AI-friendly",
+    "homepage": "https://github.com/ljh-sh/roff",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ljh-sh/roff/releases/download/v0.2.0/roff-x86_64-pc-windows-gnu.tar.xz",
+            "hash": "8baf583b3fac52de3b8bff620b54fcdbab3ff47df6ace9ec688f44f8bb654bc4"
+        }
+    },
+    "extract_dir": "bin",
+    "bin": "roff.exe",
+    "checkver": {
+        "github": "https://github.com/ljh-sh/roff"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ljh-sh/roff/releases/download/v$version/roff-x86_64-pc-windows-gnu.tar.xz"
+            }
+        }
+    }
+}
