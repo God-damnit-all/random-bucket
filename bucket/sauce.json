@@ -1,6 +1,6 @@
 {
     "version": "0.9.0",
-    "description": "A tool to help manage context/project-specific shell-things like environment variables",
+    "description": "A CLI tool to help manage context/project-specific shell-things like environment variables",
     "homepage": "https://github.com/DanCardin/sauce",
     "license": "Apache-2.0",
     "architecture": {
