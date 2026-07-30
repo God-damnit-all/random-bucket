@@ -1,0 +1,28 @@
+{
+    "version": "0.9.1",
+    "description": "Cargo plugin to generate list of all licenses for a crate",
+    "homepage": "https://github.com/EmbarkStudios/cargo-about",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "cargo-about-0.9.1-x86_64-pc-windows-msvc",
+            "url": "https://github.com/EmbarkStudios/cargo-about/releases/download/0.9.1/cargo-about-0.9.1-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "318893aff6b9efd60f70470f5827b9577ae20a805cf9732d5612862a78508581"
+        }
+    },
+    "bin": "cargo-about.exe",
+    "checkver": {
+        "github": "https://github.com/EmbarkStudios/cargo-about"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "cargo-about-$version-x86_64-pc-windows-msvc",
+                "url": "https://github.com/EmbarkStudios/cargo-about/releases/download/$version/cargo-about-$version-x86_64-pc-windows-msvc.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
