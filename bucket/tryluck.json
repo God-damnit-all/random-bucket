@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "description": "Try your luck with AI: randomized tarot, dice, and coin results for creative storytelling and TRPG adventures via CLI and MCP",
+    "homepage": "https://github.com/fluo10/tryluck",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "bin": [ [ "tryluck-windows-x86_64.exe", "tryluck" ] ],
+            "url": "https://github.com/fluo10/tryluck/releases/download/v0.2.0/tryluck-windows-x86_64.exe",
+            "hash": "c93828945a7332fe3b387e062658bceca2365dd9a5f6fdb3bde1bdd10d92a159"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/fluo10/tryluck"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fluo10/tryluck/releases/download/v$version/tryluck-windows-x86_64.exe"
+            }
+        }
+    }
+}
