@@ -1,0 +1,23 @@
+{
+    "version": "0.1.5",
+    "description": "A CLI tool for renaming media files based on titles from IMDb",
+    "homepage": "https://github.com/BurntSushi/imdb-rename",
+    "license": "Unlicense|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/BurntSushi/imdb-rename/releases/download/0.1.5/imdb-rename-0.1.5-x86_64-pc-windows-msvc.zip",
+            "hash": "8ac4cb33900eb724d00716d6b55f11eb798102a2bcca5c11a8e42e5c0f10373a"
+        }
+    },
+    "bin": "imdb-rename.exe",
+    "checkver": {
+        "github": "https://github.com/BurntSushi/imdb-rename"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/BurntSushi/imdb-rename/releases/download/$version/imdb-rename-$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
