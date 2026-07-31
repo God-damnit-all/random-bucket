@@ -33,7 +33,7 @@
                 "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_windows_arm64.tar.gz"
             }
         },
-        "hash":
+        "hash": {
             "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_checksums.txt"
         }
     }
