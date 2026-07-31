@@ -19,9 +19,7 @@
             "$ErrorActionPreference = 'Stop'",
             "trap { throw $_ }",
             "Move-Item -PSPath $dir/Windows-$architecture/cpdf.exe $dir/cpdf.exe",
-            "Get-ChildItem -PSPath $dir -ad | &{process{",
-            "  if( $_.Parent.Name -ne $version ){ throw } else { $_.Delete($true) }",
-            "}}"
+            "(Get-ChildItem -PSPath $dir -ad).ForEach{ if( $_.Parent.Name -ne $version ){ throw } $_.Delete($true) }"
         ]
     },
     "bin": "cpdf.exe",
