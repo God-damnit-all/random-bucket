@@ -1,0 +1,23 @@
+{
+    "version": "0.7.0",
+    "description": "Game memory editor for altering variables in computer games (resources, lifes, etc.)",
+    "homepage": "https://github.com/mkrueger/game_cheetah",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mkrueger/game_cheetah/releases/download/v0.7.0/game-cheetah_0.7.0_windows.zip",
+            "hash": "36e07c831a3228661a8883954a6371b3adc4e726b85e59a02ef395a7e6342e43"
+        }
+    },
+    "bin": "game-cheetah.exe",
+    "checkver": {
+        "github": "https://github.com/mkrueger/game_cheetah"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mkrueger/game_cheetah/releases/download/v$version/game-cheetah_$version_windows.zip"
+            }
+        }
+    }
+}
