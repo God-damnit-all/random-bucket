@@ -14,13 +14,9 @@
         "script": [
             "$ErrorActionPreference = 'Stop'",
             "trap { throw $_ }",
-            "(Get-ChildItem -PSPath $dir -af).Where{ $_.Name -notmatch 'COPYING|\\.md$' } | &{process{",
-            "  if( $_.Directory.Name -ne $version ){ throw } else { $_.Delete() }",
-            "}}",
+            "(Get-ChildItem -PSPath $dir -af).Where{ $_.Name -notmatch 'COPYING|\\.md$' }.ForEach{ if( $_.Directory.Name -ne $version ){ throw } $_.Delete() }",
             "Move-Item -PSPath $dir/x64/deark.exe $dir/deark.exe",
-            "Get-ChildItem -PSPath $dir -ad | &{process{",
-            "  if( $_.Parent.Name -ne $version ){ throw } else { $_.Delete($true) }",
-            "}}"
+            "(Get-ChildItem -PSPath $dir -ad).ForEach{ if( $_.Parent.Name -ne $version ){ throw } $_.Delete($true) }"
         ]
     },
     "bin": "deark.exe",
