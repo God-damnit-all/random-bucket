@@ -1,0 +1,40 @@
+{
+    "version": "1.6.0",
+    "description": "An easy-to-use pixeldrain.com CLI upload tool",
+    "homepage": "https://github.com/ManuelReschke/go-pd",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ManuelReschke/go-pd/releases/download/v1.6.0/go-pd_1.6.0_windows_amd64.tar.gz",
+            "hash": "939c322d6d74c6450143653db31ab33114139a0de34285bacd6ed504e241f9e8"
+        },
+        "32bit": {
+            "url": "https://github.com/ManuelReschke/go-pd/releases/download/v1.6.0/go-pd_1.6.0_windows_386.tar.gz",
+            "hash": "2c7c821236b51e9b03ec658987895dd34ce4cfc6e9718ee47ad751bfbf131854"
+        },
+        "arm64": {
+            "url": "https://github.com/ManuelReschke/go-pd/releases/download/v1.6.0/go-pd_1.6.0_windows_arm64.tar.gz",
+            "hash": "5e7d0bce55696ed6a4198658bce4ef9b51729b8576b83c55a486c6e9613e7e3b"
+        }
+    },
+    "bin": "go-pd.exe",
+    "checkver": {
+        "github": "https://github.com/ManuelReschke/go-pd"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_windows_amd64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_windows_386.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_windows_arm64.tar.gz"
+            }
+        },
+        "hash":
+            "url": "https://github.com/ManuelReschke/go-pd/releases/download/v$version/go-pd_$version_checksums.txt"
+        }
+    }
+}
