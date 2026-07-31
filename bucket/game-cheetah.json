@@ -10,6 +10,7 @@
         }
     },
     "bin": "game-cheetah.exe",
+    "shortcuts": [ [ "game-cheetah.exe", "Game Cheetah" ] ],
     "checkver": {
         "github": "https://github.com/mkrueger/game_cheetah"
     },
