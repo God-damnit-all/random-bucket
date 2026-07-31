@@ -14,11 +14,11 @@
         "script": [
             "$ErrorActionPreference = 'Stop'",
             "(Get-ChildItem -PSPath $dir -af).Where{ $_.Name -notmatch 'COPYING|\\.md$' } | &{process{",
-            "  if( $_.Parent.Name -eq 'deark' ){ $_.Delete() } else { throw }",
+            "  if( $_.Directory.Name -ne $version ){ throw } else {  }",
             "}}",
             "Move-Item -PSPath $dir/x64/deark.exe $dir/deark.exe",
             "Get-ChildItem -PSPath $dir -ad | &{process{",
-            "  if( $_.Parent.Name -eq $version ){ $_.Delete($true) } else { throw }",
+            "  if( $_.Parent.Name -ne $version ){ throw } else {  }",
             "}}"
         ]
     },
