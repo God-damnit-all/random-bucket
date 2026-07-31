@@ -13,6 +13,7 @@
             "hash": "de9517e888dea0e3cdc627a2c7cd5bf4f4124aa276e0afd9aed9579027849936"
         }
     },
+    "extract_dir": "cpdf-binaries-master",
     "installer": {
         "script": [
             "$ErrorActionPreference = 'Stop'",
@@ -23,7 +24,6 @@
             "}}"
         ]
     },
-    "extract_dir": "cpdf-binaries-master",
     "bin": "cpdf.exe",
     "checkver": {
         "url": "https://api.github.com/repos/coherentgraphics/cpdf-binaries/tags",
