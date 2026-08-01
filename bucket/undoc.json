@@ -1,12 +1,12 @@
 {
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "A CLI tool for converting extracted content (with CJK support); DOCX/XLSX/PPTX ► Markdown/Plaintext/JSON",
     "homepage": "https://github.com/iyulab/undoc",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/iyulab/undoc/releases/download/v0.6.0/undoc-windows-x86_64-v0.6.0.zip",
-            "hash": "1db62f994e14563cef1ac00d5c57763249d48b3a96b3fc03098aaf750bb861b1"
+            "url": "https://github.com/iyulab/undoc/releases/download/v0.7.0/undoc-windows-x86_64-v0.7.0.zip",
+            "hash": "b123f231138020acd3bf77692c318c13a24114334df00d8e817204ffdfc8559b"
         }
     },
     "bin": "undoc.exe",
