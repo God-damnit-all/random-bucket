@@ -1,0 +1,30 @@
+{
+    "version": "0.2.4",
+    "description": "A tool to convert an image (e.g. a desktop wallpaper) to any color scheme/palette you'd like",
+    "homepage": "https://github.com/Achno/gowall",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Achno/gowall/releases/download/v0.2.4/gowall-amd64-windows.tar.gz",
+            "hash": "68b589de84455d688edda6f8e327a12fdd0011b2d7d2105f09a5b8a511de0bad"
+        },
+        "arm64": {
+            "url": "https://github.com/Achno/gowall/releases/download/v0.2.4/gowall-arm64-windows.tar.gz",
+            "hash": "1ad9e55237c15b3774795948b8eda39f397fcfe79da16051681a7c7c65ccac97"
+        }
+    },
+    "bin": "gowall.exe",
+    "checkver": {
+        "github": "https://github.com/Achno/gowall"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Achno/gowall/releases/download/v$version/gowall-amd64-windows.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/Achno/gowall/releases/download/v$version/gowall-arm64-windows.tar.gz"
+            }
+        }
+    }
+}
