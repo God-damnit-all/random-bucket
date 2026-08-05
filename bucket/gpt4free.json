@@ -1,0 +1,26 @@
+{
+    "version": "7.9.4",
+    "description": "Aggregates accessible providers/interfaces to make using LLMs & media-generation models easier and more flexible",
+    "homepage": "https://github.com/xtekky/gpt4free",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xtekky/gpt4free/releases/download/v7.9.4/g4f-windows-v7.9.4-x64.zip",
+            "hash": "ce8a0b53f45eb99510c74a722ade5c619f9dfe7cec094c4016b1b271793ace70"
+        }
+    },
+    "bin": [ "g4f-windows-v7.9.4-x64.exe", "g4f" ],
+    "shortcuts": [ "g4f-windows-v7.9.4-x64.exe", "GPT4Free (g4f)" ],
+    "checkver": {
+        "github": "https://github.com/xtekky/gpt4free"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xtekky/gpt4free/releases/download/v$version/g4f-windows-v$version-x64.zip"
+            }
+        },
+        "bin": [ "g4f-windows-v$version-x64.exe", "g4f" ],
+        "shortcuts": [ "g4f-windows-v$version-x64.exe", "GPT4Free (g4f)" ]
+    }
+}
