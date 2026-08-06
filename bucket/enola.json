@@ -18,10 +18,9 @@
         }
     },
     "post_install": [
-        "$ErrorActionPreference = 'Stop'",
+        "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
         "trap { throw $_ }",
         "if (Test-Path -PSPath $dir/LICENSE) { return }",
-        "$ProgressPreference = 'SilentlyContinue'",
         "if ($PSEdition -eq 'Desktop') { [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 }",
         "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
     ],
