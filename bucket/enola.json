@@ -17,13 +17,15 @@
             "hash": "5ad5f05753b1389bc6ed7aa0ece1bb479268c8679a09de752fa010a348d9c0b3"
         }
     },
-    "pre_install": [
-        "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
-        "trap { throw $_ }",
-        "if (Test-Path -PSPath $dir/LICENSE) { return }",
-        "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
-        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
-    ],
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
     "bin": "enola.exe",
     "checkver": {
         "github": "https://github.com/TheYahya/enola"

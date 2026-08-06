@@ -9,13 +9,15 @@
             "hash": "0a51b8893233e422efa40e569266646964a1047906de0d87d176c35943b83995"
         }
     },
-    "pre_install": [
-        "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
-        "trap { throw $_ }",
-        "if (Test-Path -PSPath $dir/LICENSE) { return }",
-        "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
-        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
-    ],
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
     "bin": "gitwig.exe",
     "checkver": {
         "github": "https://github.com/tareqmy/gitwig"

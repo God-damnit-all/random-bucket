@@ -9,13 +9,15 @@
             "hash": "2d315b069fc3bf51a11911a2d4b44be0f4f48e3b5f9e10f47c7109a45b182e4d"
         }
     },
-    "pre_install": [
-        "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
-        "trap { throw $_ }",
-        "if (Test-Path -PSPath $dir/LICENSE) { return }",
-        "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
-        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/gnomeria/usbtree/refs/heads/main/LICENSE -UseBasicParsing"
-    ],
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/gnomeria/usbtree/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
     "bin": "usbtree.exe",
     "checkver": {
         "github": "https://github.com/gnomeria/usbtree"
