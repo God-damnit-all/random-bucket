@@ -9,7 +9,7 @@
             "hash": "2d315b069fc3bf51a11911a2d4b44be0f4f48e3b5f9e10f47c7109a45b182e4d"
         }
     },
-    "post_install": [
+    "pre_install": [
         "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
         "trap { throw $_ }",
         "if (Test-Path -PSPath $dir/LICENSE) { return }",
