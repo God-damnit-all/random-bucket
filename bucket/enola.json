@@ -18,9 +18,12 @@
         }
     },
     "post_install": [
+        "$ErrorActionPreference = 'Stop'",
+        "trap { throw $_ }",
         "if (Test-Path -PSPath $dir/LICENSE) { return }",
         "$ProgressPreference = 'SilentlyContinue'",
-        "Start-BitsTransfer https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE $dir/LICENSE"
+        "if ($PSEdition -eq 'Desktop') { [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 }",
+        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/TheYahya/enola/refs/heads/main/LICENSE -UseBasicParsing"
     ],
     "bin": "enola.exe",
     "checkver": {
