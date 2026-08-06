@@ -13,7 +13,7 @@
         "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
         "trap { throw $_ }",
         "if (Test-Path -PSPath $dir/LICENSE) { return }",
-        "if ($PSEdition -eq 'Desktop') { [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072 }",
+        "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
         "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/AmmarAbouZor/tui-journal/refs/heads/main/LICENSE -UseBasicParsing"
     ],
     "bin": [ "tjournal.exe", [ "tjournal.exe", "tui-journal" ] ],
