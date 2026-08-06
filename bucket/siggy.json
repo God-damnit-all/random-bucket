@@ -14,7 +14,7 @@
         "trap { throw $_ }",
         "if (Test-Path -PSPath $dir/LICENSE) { return }",
         "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
-        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/johnsideserf/siggy/refs/heads/main/LICENSE -UseBasicParsing"
+        "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/johnsideserf/siggy/refs/heads/master/LICENSE -UseBasicParsing"
     ],
     "bin": "siggy.exe",
     "checkver": {
