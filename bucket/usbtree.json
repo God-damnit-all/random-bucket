@@ -16,7 +16,7 @@
         "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
         "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/gnomeria/usbtree/refs/heads/main/LICENSE -UseBasicParsing"
     ],
-    "bin": "gitwig.exe",
+    "bin": "usbtree.exe",
     "checkver": {
         "github": "https://github.com/gnomeria/usbtree"
     },
