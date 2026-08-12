@@ -20,6 +20,9 @@
                 "extract_dir": "mant-$version-windows-x64",
                 "url": "https://github.com/BryanHeBY/ManT/releases/download/v$version/mant-$version-windows-x64.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/BryanHeBY/ManT/releases/download/v$version/SHA256SUMS"
         }
     }
 }
