@@ -21,8 +21,11 @@
         "script": [
             "$ErrorActionPreference = 'Stop'",
             "trap { throw $_ }",
-            "(Get-ChildItem -PSPath $persist_dir -Directory -ea 0).Where{ $_.Name -match '\\.megabasterd[0-9.]+' } |",
-            "    Rename-Item -NewName .megabasterd$version",
+            "Get-ChildItem -PSPath $persist_dir -Directory -ea 0 | &{process{",
+            "    if ($_.Name -ne \".megabasterd$version\" -and $_.Name -match '\\.megabasterd[0-9.]+') {",
+            "        Rename-Item -PSPath $_ .megabasterd$version",
+            "    }",
+            "}}",
             "[System.IO.File]::WriteAllLines(\"$dir/MegaBasterd.bat\", '@START javaw.exe -jar \"%~dp0MegaBasterd.jar\" %*')",
             "[void](New-Item $dir/.megabasterd_portable)"
         ]
