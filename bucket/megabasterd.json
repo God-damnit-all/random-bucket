@@ -44,7 +44,7 @@
         "persist": [
             ".megabasterd_old_backups",
             ".megabasterd$version"
-        ]
+        ],
         "url": [
             "https://github.com/tonikelope/megabasterd/releases/download/v$version/MegaBasterd_$version.jar#/MegaBasterd.jar",
             "https://raw.githubusercontent.com/tonikelope/megabasterd/v$version/src/main/resources/images/pica_roja_big.ico#/MegaBasterd.ico"
