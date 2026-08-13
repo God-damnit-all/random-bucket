@@ -1,5 +1,5 @@
 {
-    "version": "8.58",
+    "version": "8.57",
     "description": "Yet another unofficial (and ugly) cross-platform MEGA downloader/uploader/streaming suite.",
     "homepage": "https://github.com/tonikelope/megabasterd",
     "license": "GPL-3.0-only",
@@ -10,17 +10,21 @@
         ]
     },
     "url": [
-        "https://github.com/tonikelope/megabasterd/releases/download/v8.58/MegaBasterd_8.58.jar#/MegaBasterd.jar",
-        "https://raw.githubusercontent.com/tonikelope/megabasterd/v8.58/src/main/resources/images/pica_roja_big.ico#/MegaBasterd.ico"
+        "https://github.com/tonikelope/megabasterd/releases/download/v8.57/MegaBasterd_8.57.jar#/MegaBasterd.jar",
+        "https://raw.githubusercontent.com/tonikelope/megabasterd/v8.57/src/main/resources/images/pica_roja_big.ico#/MegaBasterd.ico"
     ],
     "hash": [
-        "199b333f91dc55698110da04bd6574245a3f757d6191f87bccbf9f51b208c4a0",
+        "583c9824617a30baca8320135c8115cdfac66ac92c7fcf4bde0d14546ba0292e",
         "33200e7142dd3c9b11ea4dfc6b38082745ca120bf2d564e1fcbd0b407b22378e"
     ],
     "installer": {
         "script": [
+            "$ErrorActionPreference = 'Stop'",
+            "trap { throw $_ }",
+            "(Get-ChildItem -PSPath $persist_dir/megabasterd -Directory -ea 0).Where{ $_.Name -match '.megabasterd[0-9.]+' } |",
+            "    Rename-Item -NewName .megabasterd$version",
             "[System.IO.File]::WriteAllLines(\"$dir/MegaBasterd.bat\", '@START javaw.exe -jar \"%~dp0MegaBasterd.jar\" %*')",
-            "New-Item $dir/.megabasterd_portable"
+            "[void](New-Item $dir/.megabasterd_portable)"
         ]
     },
     "shortcuts": [
@@ -31,8 +35,16 @@
             "MegaBasterd.ico"
         ]
     ],
+    "persist": [
+        ".megabasterd_old_backups",
+        ".megabasterd8.57"
+    ],
     "checkver": "github",
     "autoupdate": {
+        "persist": [
+            ".megabasterd_old_backups",
+            ".megabasterd$version"
+        ]
         "url": [
             "https://github.com/tonikelope/megabasterd/releases/download/v$version/MegaBasterd_$version.jar#/MegaBasterd.jar",
             "https://raw.githubusercontent.com/tonikelope/megabasterd/v$version/src/main/resources/images/pica_roja_big.ico#/MegaBasterd.ico"
