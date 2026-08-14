@@ -1,0 +1,51 @@
+{
+    "version": "0.5.0",
+    "description": "An advanced web path brute-force scanner",
+    "homepage": "https://github.com/maurosoria/dirsearch",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "bin": [ [ "dirsearch-v0.5.0-windows-x64-async.exe", "dirsearch" ] ],
+            "url": "https://github.com/maurosoria/dirsearch/releases/download/v0.5.0/dirsearch-v0.5.0-windows-x64-async.exe",
+            "hash": "4870de99598ac8997567d8ffb9075d42de8f6fb43039bb57d0eb5146288c8117"
+        }
+    },
+    "installer": {
+        "script": [
+            "# 'GPL-2.0-only' is specified in pyproject.toml and Cargo.toml",
+            "# Repo is lacking a LICENSE file, but this is present at the top of the source code files:",
+            "Set-Content -PSPath $dir/LICENSE @'",
+            "This program is free software; you can redistribute it and/or modify",
+            "it under the terms of the GNU General Public License as published by",
+            "the Free Software Foundation; either version 2 of the License, or",
+            "(at your option) any later version.",
+            "",
+            "This program is distributed in the hope that it will be useful,",
+            "but WITHOUT ANY WARRANTY; without even the implied warranty of",
+            "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the",
+            "GNU General Public License for more details.",
+            "",
+            "You should have received a copy of the GNU General Public License",
+            "along with this program; if not, write to the Free Software",
+            "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,",
+            "MA 02110-1301, USA.",
+            "",
+            "Author: Mauro Soria",
+            "'@"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/maurosoria/dirsearch"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "bin": [ [ "dirsearch-v$version-windows-x64-async.exe", "dirsearch" ] ],
+                "url": "https://github.com/maurosoria/dirsearch/releases/download/v$version/dirsearch-v$version-windows-x64-async.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/maurosoria/dirsearch/releases/download/v$version/SHA256SUMS.txt"
+        }
+    }
+}
