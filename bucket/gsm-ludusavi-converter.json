@@ -19,9 +19,9 @@
             "[void](New-Item $persist_dir -Type D -Force)",
             "[void](New-Item $persist_dir/app.log -ea 0)",
             "[void](New-Item $persist_dir/config.yaml -ea 0)",
-            "Set-Content -PSPath $dir/gsm_ludusavi_converter_cli.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --no-gui'",
-            "Set-Content -PSPath $dir/gsm_ludusavi_converter_gui.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --gui'",
-            "Set-Content -PSPath $dir/gsm_ludusavi_converter.cmd '@\"%~dp0gsm_ludusavi_converter.exe\"'"
+            "Set-Content -PSPath $dir/gsm_ludusavi_converter_cli.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --no-gui %*'",
+            "Set-Content -PSPath $dir/gsm_ludusavi_converter_gui.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" --gui %*'",
+            "Set-Content -PSPath $dir/gsm_ludusavi_converter.cmd '@\"%~dp0gsm_ludusavi_converter.exe\" %*'"
         ]
     },
     "shortcuts": [
