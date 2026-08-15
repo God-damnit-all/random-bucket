@@ -5,8 +5,6 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "bin": [ [ "giga-grabber.cmd", "giga-grabber" ] ],
-            "shortcut": [ [ "giga-grabber.exe", "Giga Grabber" ] ],
             "url": "https://github.com/chanderlud/giga-grabber/releases/download/v1.3.6/giga-grabber-1.3.6-windows-standalone-x86_64.exe#/giga-grabber.exe",
             "hash": "52b2f0cc911fc6e26b6ff54898887524c7809461697c384000ebdbd0351f3593"
         }
@@ -20,6 +18,8 @@
             "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/chanderlud/giga-grabber/refs/heads/main/LICENSE -UseBasicParsing"
         ]
     },
+    "bin": [ [ "giga-grabber.cmd", "giga-grabber" ] ],
+    "shortcuts": [ [ "giga-grabber.exe", "Giga Grabber" ] ],
     "checkver": {
         "github": "https://github.com/chanderlud/giga-grabber"
     },
