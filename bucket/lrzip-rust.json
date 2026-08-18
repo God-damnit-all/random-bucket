@@ -1,0 +1,23 @@
+{
+    "version": "0.27.0",
+    "description": "High-performance compression tool for Long Range Zip (aka 'LZMA RZIP'/'lrzip'), a format optimized for large files",
+    "homepage": "https://github.com/canonrebel04/lrzip-rust",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/canonrebel04/lrzip-rust/releases/download/v0.27.0/lrzip-rust-x86_64-pc-windows-msvc.zip",
+            "hash": "d523a84734f1d88d84e811e4345463ae30dfc7fe5c57d9d33773bd8da47270d5"
+        }
+    },
+    "bin": "lrzip-rust.exe",
+    "checkver": {
+        "github": "https://github.com/canonrebel04/lrzip-rust"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/canonrebel04/lrzip-rust/releases/download/v$version/lrzip-rust-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
