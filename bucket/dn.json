@@ -1,0 +1,23 @@
+{
+    "version": "4.5.2",
+    "description": "DownloadNet — offline web archive with full text search",
+    "homepage": "https://github.com/DO-SAY-GO/tdf/tree/v4.5.2",
+    "license": "LicenseRef-PolyForm-Strict-1.0.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/DO-SAY-GO/tdf/releases/download/v4.5.2/dn-win.exe",
+            "hash": "8543bdf746394c4c12527b05f9c2a62491854f8a22491f607ca5b730011a3b6f"
+        }
+    },
+    "bin": [ [ "dn-win.exe", "dn" ] ],
+    "checkver": {
+        "github": "https://github.com/DO-SAY-GO/tdf"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/DO-SAY-GO/tdf/releases/download/v$version/dn-win.exe"
+            }
+        }
+    }
+}
