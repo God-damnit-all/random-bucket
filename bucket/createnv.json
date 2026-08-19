@@ -1,0 +1,32 @@
+{
+    "version": "0.0.3",
+    "description": "Interactive CLI wizard to generate '.env' files based on user-supplied templates",
+    "homepage": "https://github.com/cuducos/createnv",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cuducos/createnv/releases/download/v0.0.3/createnv-x86_64-pc-windows-msvc.zip",
+            "hash": "3a87bd600b003cb6a29d12a90961d32de49b14c3692f50ffd42303308a5b26e4"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/cuducos/createnv/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
+    "bin": "createnv.exe",
+    "checkver": {
+        "github": "https://github.com/cuducos/createnv"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cuducos/createnv/releases/download/v$version/createnv-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
