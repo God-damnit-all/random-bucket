@@ -1,6 +1,6 @@
 {
     "version": "beta-0.1.5",
-    "description": "A simple firewall tool for configuring Windows Filtering Platform (WFP) to control network activity",
+    "description": "TUI YouTube music player that aims to be as fast and simple as possible",
     "homepage": "https://github.com/ccgauche/ytermusic",
     "license": "Apache-2.0",
     "architecture": {
