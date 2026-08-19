@@ -1,0 +1,26 @@
+{
+    "version": "0.1.1",
+    "description": "Structure-aware Git CLI diff for code review: collapse formatting noise, detect moved code, probable renames, import reorders, and meaningful edits",
+    "homepage": "https://github.com/harivilasp/intentdiff",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/harivilasp/intentdiff/releases/download/v0.1.1/intentdiff-v0.1.1-x86_64-pc-windows-msvc.zip",
+            "hash": "813f754d28b256754bf915acd2cade2949e6f46fa0cd8aba394dd1c05381cc4d"
+        }
+    },
+    "bin": "intentdiff.exe",
+    "checkver": {
+        "github": "https://github.com/harivilasp/intentdiff"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/harivilasp/intentdiff/releases/download/v$version/intentdiff-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/harivilasp/intentdiff/releases/download/v$version/intentdiff-v$version-x86_64-pc-windows-msvc.sha256"
+        }
+    }
+}
