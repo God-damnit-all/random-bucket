@@ -1,0 +1,32 @@
+{
+    "version": "0.4.0",
+    "description": "A Git-aware, customizable 'tree' replacement that generates interactive file-opening shortcuts",
+    "homepage": "https://github.com/dduan/tre",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-pc-windows-msvc.zip",
+            "hash": "9dfbf8c33038e6b31fb359d7f8e7661e46f015067f5cc2f378c93d8bbd1a432a"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if ((Test-Path -PSPath $dir/LICENSE) -or (Test-Path -PSPath $dir/LICENSE.md)) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/dduan/tre/refs/heads/main/LICENSE.md -UseBasicParsing"
+        ]
+    },
+    "bin": "tre.exe",
+    "checkver": {
+        "github": "https://github.com/dduan/tre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dduan/tre/releases/download/v$version/tre-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
