@@ -1,0 +1,31 @@
+{
+    "version": "0.8.0",
+    "description": "Identify mysterious text or analyze hard-coded strings from captured network packets, malwares, or just about anything",
+    "homepage": "https://github.com/swanandx/lemmeknow",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/swanandx/lemmeknow/releases/download/v0.8.0/lemmeknow-windows.exe",
+            "hash": "6983af87d102bfe6fb00ed67ee64e7968908cb3242f8dee9e2eb981c297e6c66"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/swanandx/lemmeknow/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
+    "bin": [ [ "lemmeknow-windows.exe", "lemmeknow.exe"] ],
+    "checkver": {
+        "github": "https://github.com/swanandx/lemmeknow"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/swanandx/lemmeknow/releases/download/v$version/lemmeknow-windows.exe"
+            }
+        }
+    }
+}
