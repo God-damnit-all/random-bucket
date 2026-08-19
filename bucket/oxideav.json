@@ -1,0 +1,25 @@
+{
+    "version": "0.0.5",
+    "description": "Pure-Rust media transcoding framework — codecs, containers, filters, and a JSON transcode job graph",
+    "homepage": "https://github.com/OxideAV/oxideav-workspace",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "oxideav-v0.0.5-windows-x86_64",
+            "url": "https://github.com/OxideAV/oxideav-workspace/releases/download/v0.0.5/oxideav-v0.0.5-windows-x86_64.zip",
+            "hash": "eb9471c936575bb3e96e45f6197ac8aafa3fbdd1e45dccd2a5a44478dcd0ceff"
+        }
+    },
+    "bin": [ "oxideav.exe", "oxideplay.exe" ],
+    "checkver": {
+        "github": "https://github.com/OxideAV/oxideav-workspace"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "oxideav-v$version-windows-x86_64",
+                "url": "https://github.com/OxideAV/oxideav-workspace/releases/download/v$version/oxideav-v$version-windows-x86_64.zip"
+            }
+        }
+    }
+}
