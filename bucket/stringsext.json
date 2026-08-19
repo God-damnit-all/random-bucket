@@ -1,0 +1,33 @@
+{
+    "version": "2.3.5",
+    "description": "Find multi-byte-encoded strings in binary data",
+    "homepage": "https://github.com/getreu/stringsext",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getreu/stringsext/releases/download/v2.3.5/stringsext-v2.3.5-x86_64-pc-windows-msvc.zip",
+            "hash": "483128449a1c45ba62665350ba07a0631331e0c0f62bd8278873ebd3c678af24"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if ((Test-Path -PSPath $dir/LICENSE) -or (Test-Path -PSPath $dir/LICENSE-APACHE) -or (Test-Path -PSPath $dir/LICENSE-MIT)) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE-APACHE https://raw.githubusercontent.com/getreu/stringsext/refs/heads/master/LICENSE-APACHE -UseBasicParsing",
+            "Invoke-WebRequest -OutFile $dir/LICENSE-MIT https://raw.githubusercontent.com/getreu/stringsext/refs/heads/master/LICENSE-MIT -UseBasicParsing"
+        ]
+    },
+    "bin": "stringsext.exe",
+    "checkver": {
+        "github": "https://github.com/getreu/stringsext"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getreu/stringsext/releases/download/v$version/stringsext-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
