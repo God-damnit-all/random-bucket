@@ -1,0 +1,32 @@
+{
+    "version": "0.1.0",
+    "description": "Customizable, colorized, and extensible 'ls' replacement with size formatting, filtering, tree view, and more",
+    "homepage": "https://github.com/tikrack/peek",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tikrack/peek/releases/download/v0.1.0/peek.exe",
+            "hash": "d5418b7360f19905213dd81224c0f2dd54e8cce414eb149ce7a9ec1329432b14"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/tikrack/peek/refs/heads/main/LICENSE -UseBasicParsing"
+        ]
+    },
+    "bin": "peek.exe",
+    "checkver": {
+        "github": "https://github.com/tikrack/peek"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tikrack/peek/releases/download/v$version/peek.exe"
+            }
+        }
+    }
+}
