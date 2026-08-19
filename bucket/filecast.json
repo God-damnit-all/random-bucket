@@ -1,13 +1,18 @@
 {
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Fast file transfer over LAN using UDP broadcast with built-in packet loss recovery",
     "homepage": "https://github.com/gistrec/filecast",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "bin": [ [ "filecast-windows-x86_64.exe", "filecast" ] ],
-            "url": "https://github.com/gistrec/filecast/releases/download/v1.0.1/filecast-windows-x86_64.exe",
-            "hash": "sha256:21af25b61ce3279089138cb38526cc998dc79c6d7177983026b30b8b0ae9ac2e"
+            "bin": [
+                [
+                    "filecast-windows-x86_64.exe",
+                    "filecast"
+                ]
+            ],
+            "url": "https://github.com/gistrec/filecast/releases/download/v1.1.0/filecast-windows-x86_64.exe",
+            "hash": "dfd145d5a977449688a96b515a6cc5a51ca66ce3d2790b3d7f603df4dd2584b4"
         }
     },
     "checkver": {
