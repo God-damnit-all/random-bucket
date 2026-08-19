@@ -1,0 +1,34 @@
+{
+    "version": "beta-0.1.5",
+    "description": "A simple firewall tool for configuring Windows Filtering Platform (WFP) to control network activity",
+    "homepage": "https://github.com/ccgauche/ytermusic",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ccgauche/ytermusic/releases/download/beta-0.1.5/ytermusic-beta-0.1.5-x86_64-pc-windows-msvc.zip",
+            "hash": "2d77cb180c4729f5012e689d4132a36d99cbb9bb97a90bffec2ea48d90f660c1"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if (Test-Path -PSPath $dir/LICENSE) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/ccgauche/ytermusic/refs/heads/master/LICENSE -UseBasicParsing"
+        ]
+    },
+    "bin": "ytermusic.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/ccgauche/ytermusic/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "v?([\\d\\w\\-\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ccgauche/ytermusic/releases/download/$version/ytermusic-$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
