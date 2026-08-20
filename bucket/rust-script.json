@@ -1,0 +1,33 @@
+{
+    "version": "0.36.0",
+    "description": "Run Rust files and expressions as scripts without any setup or compilation step",
+    "homepage": "https://github.com/fornwall/rust-script",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fornwall/rust-script/releases/download/0.36.0/rust-script-x86_64-pc-windows-msvc.zip",
+            "hash": "9c724d7708929b53b68003e82a9eb0324870615aa6919bf25b7bf898b2c750c5"
+        }
+    },
+    "installer": {
+        "script": [
+            "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
+            "trap { throw $_ }",
+            "if ((Test-Path -PSPath $dir/LICENSE) -or (Test-Path -PSPath $dir/LICENSE-APACHE) -or (Test-Path -PSPath $dir/LICENSE-MIT)) { return }",
+            "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
+            "Invoke-WebRequest -OutFile $dir/LICENSE-APACHE https://raw.githubusercontent.com/reflex-search/reflex/refs/heads/main/LICENSE-APACHE -UseBasicParsing",
+            "Invoke-WebRequest -OutFile $dir/LICENSE-MIT https://raw.githubusercontent.com/reflex-search/reflex/refs/heads/main/LICENSE-MIT -UseBasicParsing"
+        ]
+    },
+    "bin": "rust-script.exe",
+    "checkver": {
+        "github": "https://github.com/fornwall/rust-script"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fornwall/rust-script/releases/download/$version/rust-script-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
