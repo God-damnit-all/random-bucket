@@ -15,8 +15,8 @@
             "trap { throw $_ }",
             "if ((Test-Path -PSPath $dir/LICENSE) -or (Test-Path -PSPath $dir/LICENSE-APACHE) -or (Test-Path -PSPath $dir/LICENSE-MIT)) { return }",
             "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
-            "Invoke-WebRequest -OutFile $dir/LICENSE-APACHE https://raw.githubusercontent.com/reflex-search/reflex/refs/heads/main/LICENSE-APACHE -UseBasicParsing",
-            "Invoke-WebRequest -OutFile $dir/LICENSE-MIT https://raw.githubusercontent.com/reflex-search/reflex/refs/heads/main/LICENSE-MIT -UseBasicParsing"
+            "Invoke-WebRequest -OutFile $dir/LICENSE-APACHE https://raw.githubusercontent.com/fornwall/rust-script/refs/heads/main/LICENSE-APACHE -UseBasicParsing",
+            "Invoke-WebRequest -OutFile $dir/LICENSE-MIT https://raw.githubusercontent.com/fornwall/rust-script/refs/heads/main/LICENSE-MIT -UseBasicParsing"
         ]
     },
     "bin": "rust-script.exe",
