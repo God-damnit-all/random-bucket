@@ -1,13 +1,13 @@
 {
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "Turn Markdown and mandoc files into navigable structured documents for people and agents; native TUI, CLI, and MCP",
     "homepage": "https://github.com/BryanHeBY/ManT",
     "license": "Apache-2.0|BSD-2-Clause|BSD-2-Clause-pos-unchanged|BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "extract_dir": "mant-0.8.0-windows-x64",
-            "url": "https://github.com/BryanHeBY/ManT/releases/download/v0.8.0/mant-0.8.0-windows-x64.zip",
-            "hash": "714a649983d6739260705493f42688e1c12b120356d39a2d7cd36dee9f50f724"
+            "extract_dir": "mant-0.9.0-windows-x64",
+            "url": "https://github.com/BryanHeBY/ManT/releases/download/v0.9.0/mant-0.9.0-windows-x64.zip",
+            "hash": "1cbcccede4c8a7441317feda2bee136002d452a95c88058f1048ef41bbb9b0b5"
         }
     },
     "bin": "mant.exe",
