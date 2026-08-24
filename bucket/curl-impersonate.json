@@ -18,23 +18,19 @@
         }
     },
     "bin": "curl-impersonate.exe",
-    "installer": {
-        "script": [
-            "Write-Host $null",
-            "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
-            "    Write-Host \"Creating shim for '$($_.BaseName)'\"",
-            "    shim \"$dir\\$($_.Name)\" $global $_.BaseName",
-            "}}"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Write-Host $null",
-            "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
-            "    rm_shim $_.BaseName (shimdir $global)",
-            "}}"
-        ]
-    },
+    "post_install": [
+        "Write-Host $null",
+        "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
+        "    Write-Host \"Creating shim for '$($_.BaseName)'\"",
+        "    shim \"$dir\\$($_.Name)\" $global $_.BaseName",
+        "}}"
+    ],
+    "pre_uninstall": [
+        "Write-Host $null",
+        "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
+        "    rm_shim $_.BaseName (shimdir $global)",
+        "}}"
+    ],
     "checkver": {
         "github": "https://github.com/lexiforest/curl-impersonate"
     },
