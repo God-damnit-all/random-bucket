@@ -21,7 +21,7 @@
         "script": [
             "Write-Host $null",
             "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
-            "    Write-Host \"Creating shim for '$($_.Name)'\"",
+            "    Write-Host \"Creating shim for '$($_.BaseName)'\"",
             "    shim \"$dir\\$($_.Name)\" $global $_.BaseName",
             "}}"
         ]
