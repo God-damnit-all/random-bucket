@@ -13,7 +13,7 @@
         "script": [
             "$ErrorActionPreference, $ProgressPreference = 'Stop', 'SilentlyContinue'",
             "trap { throw $_ }",
-            "[void](New-Item $persist_dir/config.json -ea 0 | Set-Content '{\"check_for_updates\": false}')",
+            "[void](New-Item $persist_dir/config.json -ea 0 | Set-Content -PSPath {$_} '{\"check_for_updates\": false}')",
             "[void](New-Item $persist_dir/giga-grabber.log -ea 0)",
             "Set-Content -PSPath $dir/giga-grabber.cmd '@\"%~dp0giga-grabber.exe\" %*'",
             "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072",
