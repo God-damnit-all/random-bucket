@@ -27,12 +27,14 @@
             "}}"
         ]
     },
-        "pre_uninstall": [
+    "uninstaller": {
+        "script": [
             "Write-Host $null",
             "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
             "    rm_shim $_.BaseName (shimdir $global)",
             "}}"
-        ],
+        ]
+    },
     "checkver": {
         "github": "https://github.com/lexiforest/curl-impersonate"
     },
