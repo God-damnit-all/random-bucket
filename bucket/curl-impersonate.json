@@ -19,9 +19,11 @@
     },
     "installer": {
         "script": [
-            "foreach ($batFile in Get-ChildItem -PSPath $dir -Filter *.bat) {",
-            "    shim \"$dir\\$($batFile.Name)\" $global $batFile.BaseName",
-            "}"
+            "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
+            "    Write-Host \"Creating shim for '$($_.Name)'\"",
+            "    shim \"$dir\\$($_.Name)\" $global $_.BaseName",
+            "}}",
+            "Write-Host $null"
         ]
     },
     "bin": "curl-impersonate.exe",
