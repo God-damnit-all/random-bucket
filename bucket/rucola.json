@@ -1,0 +1,26 @@
+{
+    "version": "0.10.0",
+    "description": "Terminal-based markdown note manager to view statistics, explore connections, and launch editing/viewing applications",
+    "homepage": "https://github.com/Linus-Mussmaecher/rucola",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Linus-Mussmaecher/rucola/releases/download/v0.10.0/rucola-notes-x86_64-pc-windows-msvc.zip",
+            "hash": "1c03e5890238562497c2d89a3b75b02560af349c1fc3e713d3284f532a5cd748"
+        }
+    },
+    "bin": "rucola.exe",
+    "checkver": {
+        "github": "https://github.com/Linus-Mussmaecher/rucola"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Linus-Mussmaecher/rucola/releases/download/v$version/rucola-notes-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
