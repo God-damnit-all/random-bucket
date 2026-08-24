@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Linus-Mussmaecher/rucola/releases/download/v0.10.0/rucola-notes-x86_64-pc-windows-msvc.zip",
-            "hash": "1c03e5890238562497c2d89a3b75b02560af349c1fc3e713d3284f532a5cd748"
+            "hash": "4948a44846d8fc6dd6fc393482c0c7e468ee67c092d2d72e9e76eb2a41e1a941"
         }
     },
     "bin": "rucola.exe",
