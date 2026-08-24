@@ -1,0 +1,26 @@
+{
+    "version": "0.1.0",
+    "description": "Edky (pronounced ed-key) converts Ed25519 public keys between various encoding formats",
+    "homepage": "https://github.com/artob/edky",
+    "license": "Unlicense",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/artob/edky/releases/download/0.1.0/edky-x86_64-pc-windows-msvc.zip",
+            "hash": "11528b826a8cf66fa2aa0e69f5cfdce1011630c64935963bdbe31b0e931af5a1"
+        }
+    },
+    "bin": "edky.exe",
+    "checkver": {
+        "github": "https://github.com/artob/edky"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/artob/edky/releases/download/$version/edky-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
