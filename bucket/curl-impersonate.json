@@ -17,6 +17,7 @@
             "hash": "f96a15892eda50cb02db457de4aebea86a7c72462fdb90741a963b890cdf08d7"
         }
     },
+    "bin": "curl-impersonate.exe",
     "installer": {
         "script": [
             "Write-Host $null",
@@ -26,7 +27,14 @@
             "}}"
         ]
     },
-    "bin": "curl-impersonate.exe",
+    "uninstaller": {
+        "script": [
+            "Write-Host $null",
+            "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
+            "    rm_shim \"$($_.BaseName)\" \"$(shimdir $global)\"",
+            "}}"
+        ]
+    },
     "checkver": {
         "github": "https://github.com/lexiforest/curl-impersonate"
     },
