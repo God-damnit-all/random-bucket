@@ -20,7 +20,7 @@
     "installer": {
         "script": [
             "foreach ($batFile in Get-ChildItem -PSPath $dir -Filter *.bat) {",
-            "    shim \"$dir\\$($exe.Name)\" $architecture",
+            "    shim \"$dir\\$($exe.Name)\"",
             "}"
         ]
     },
