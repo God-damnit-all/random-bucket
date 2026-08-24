@@ -1,0 +1,44 @@
+{
+    "version": "2.1.1",
+    "description": "A 'curl' fork that can impersonate the 4 major browsers (Chrome/Edge/Safari/Firefox), performing TLS & HTTP handshakes identical to theirs",
+    "homepage": "https://github.com/lexiforest/curl-impersonate",
+    "license": "MIT,curl",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v2.1.1/curl-impersonate-v2.1.1.x86_64-win32.tar.gz",
+            "hash": "c89bd43f0becf0c4f50c58257bf09a900eb69679056cddbe3c5f4e34dcb2bf3f"
+        },
+        "32bit": {
+            "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v2.1.1/curl-impersonate-v2.1.1.i686-win32.tar.gz",
+            "hash": "954a4df333c043b9bfc33e1831fd9a90b6d2cc2645f48a45cf64c23dcb65adae"
+        },
+        "arm64": {
+            "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v2.1.1/curl-impersonate-v2.1.1.arm64-win32.tar.gz",
+            "hash": "f96a15892eda50cb02db457de4aebea86a7c72462fdb90741a963b890cdf08d7"
+        }
+    },
+    "installer": {
+        "script": [
+            "foreach ($batFile in Get-ChildItem -PSPath $dir -Filter *.bat) {",
+            "    shim \"$dir\\$($exe.Name)\" $architecture",
+            "}"
+        ]
+    },
+    "bin": "curl-impersonate.exe",
+    "checkver": {
+        "github": "https://github.com/lexiforest/curl-impersonate"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v$version/curl-impersonate-v$version.x86_64-win32.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v$version/curl-impersonate-v$version.i686-win32.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/lexiforest/curl-impersonate/releases/download/v$version/curl-impersonate-v$version.arm64-win32.tar.gz"
+            }
+        }
+    }
+}
