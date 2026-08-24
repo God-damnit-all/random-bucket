@@ -22,8 +22,7 @@
             "Get-ChildItem -PSPath $dir -Filter *.bat | &{process{",
             "    Write-Host \"Creating shim for '$($_.Name)'\"",
             "    shim \"$dir\\$($_.Name)\" $global $_.BaseName",
-            "}}",
-            "Write-Host $null"
+            "}}"
         ]
     },
     "bin": "curl-impersonate.exe",
