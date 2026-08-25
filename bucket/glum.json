@@ -1,6 +1,6 @@
 {
     "version": "0.3.0",
-    "description": "A comprehensive coding agent that integrates AI capabilities with your development environment",
+    "description": "TUI markdown reader",
     "homepage": "https://github.com/jaschadub/glum",
     "license": "Apache-2.0",
     "architecture": {
