@@ -17,7 +17,7 @@
             "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/swanandx/lemmeknow/refs/heads/main/LICENSE -UseBasicParsing"
         ]
     },
-    "bin": [ [ "lemmeknow-windows.exe", "lemmeknow.exe"] ],
+    "bin": [ [ "lemmeknow-windows.exe", "lemmeknow"] ],
     "checkver": {
         "github": "https://github.com/swanandx/lemmeknow"
     },
