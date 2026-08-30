@@ -1,12 +1,12 @@
 {
-    "version": "1.14.2",
+    "version": "1.14.3",
     "description": "TUI Signal messenger client with an IRC aesthetic and Vim-like keybindings",
     "homepage": "https://github.com/johnsideserf/siggy",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/johnsideserf/siggy/releases/download/v1.14.2/siggy-v1.14.2-x86_64-pc-windows-msvc.zip",
-            "hash": "dbda21cea229995feed81e64fd21fa066bdaa763958a8495ad93988fcecaa7f9"
+            "url": "https://github.com/johnsideserf/siggy/releases/download/v1.14.3/siggy-v1.14.3-x86_64-pc-windows-msvc.zip",
+            "hash": "a32f3e0686add7e98d2b2968cccb670e14b83594e30f06e49ea43c3c39bc8b12"
         }
     },
     "installer": {
