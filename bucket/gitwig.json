@@ -1,12 +1,12 @@
 {
-    "version": "2.5.12",
+    "version": "2.5.13",
     "description": "A keyboard-driven Git TUI that displays repositories, worktrees, stashes, and branches",
     "homepage": "https://github.com/tareqmy/gitwig",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tareqmy/gitwig/releases/download/v2.5.12/gitwig-v2.5.12-x86_64-pc-windows-msvc.zip",
-            "hash": "5621050db845676795c7d3bfdfed83aa360e039fe86de466de620dd9d84b8f08"
+            "url": "https://github.com/tareqmy/gitwig/releases/download/v2.5.13/gitwig-v2.5.13-x86_64-pc-windows-msvc.zip",
+            "hash": "ffd2a8dc43b03e5fd761ce6c8d0cf7b112b415478c4d45251e44487d9c050e16"
         }
     },
     "installer": {
