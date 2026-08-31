@@ -1,12 +1,12 @@
 {
-    "version": "0.9.30",
+    "version": "0.9.31",
     "description": "Manages programming language runtimes, package managers, and development tools, and can easily provide full-stack capabilities to AI",
     "homepage": "https://github.com/loonghao/vx",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/loonghao/vx/releases/download/v0.9.30/vx-x86_64-pc-windows-msvc.zip",
-            "hash": "cc40d6981f0b1363ad518c997a476795bae4caa0c5721b7af7fb3255af77fb25"
+            "url": "https://github.com/loonghao/vx/releases/download/v0.9.31/vx-x86_64-pc-windows-msvc.zip",
+            "hash": "5dc9db0627c471bc5dd3594bdbd8ae61e75dc0a6b70009aad5fe94948e17d03e"
         }
     },
     "bin": "vx.exe",
