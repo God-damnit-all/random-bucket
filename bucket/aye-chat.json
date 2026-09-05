@@ -1,12 +1,12 @@
 {
-    "version": "0.55.3",
+    "version": "0.56.0",
     "description": "AI-powered terminal workspace",
     "homepage": "https://github.com/acrotron/aye-chat",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/acrotron/aye-chat/releases/download/v0.55.3/aye-chat-portable-win64.zip",
-            "hash": "f1c897d1f6232c0191c96c176ace9020b4af5489cd017d67a346abeb6c921d26"
+            "url": "https://github.com/acrotron/aye-chat/releases/download/v0.56.0/aye-chat-portable-win64.zip",
+            "hash": "971d0dd557c0e1c91f486808440d25bfab0c9dabc14594af5504197bf193af0d"
         }
     },
     "bin": "aye.exe",
