@@ -6,9 +6,9 @@
     "notes": "This package provides only the Windows 10 version of Sophia Script. It may not work on Windows 11.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/farag2/Sophia-Script-for-Windows/releases/download/7.3.0/Sophia.Script.for.Windows.10.v7.3.0.zip",
+            "url": "https://github.com/farag2/Sophia-Script-for-Windows/releases/download/7.3.0/Sophia.Script.for.Windows.10.v6.3.0.zip",
             "hash": "f8f776314d1a92abd68753003ae579a1d7fa76d8e6090a31fd9ba517c1831bd7",
-            "extract_dir": "Sophia_Script_for_Windows_10_v7.3.0"
+            "extract_dir": "Sophia_Script_for_Windows_10_v6.3.0"
         }
     },
     "bin": [
@@ -25,8 +25,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/farag2/Sophia-Script-for-Windows/releases/download/$version/Sophia.Script.for.Windows.10.v$version.zip",
-                "extract_dir": "Sophia_Script_for_Windows_10_v$version"
+                "url": "https://github.com/farag2/Sophia-Script-for-Windows/releases/download/$version/Sophia.Script.for.Windows.10.v6.$minorVersion.$patchVersion.zip",
+                "extract_dir": "Sophia_Script_for_Windows_10_v6.$minorVersion.$patchVersion"
             }
         }
     }
