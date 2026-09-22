@@ -1,12 +1,12 @@
 {
-    "version": "1.6.1",
+    "version": "1.7.0",
     "description": "Local-first, full-text search engine (primarily for code) with AI agent integration",
     "homepage": "https://github.com/reflex-search/reflex",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/reflex-search/reflex/releases/download/v1.6.1/reflex-search-x86_64-pc-windows-msvc.zip",
-            "hash": "95582ab55bc9a4f13e495c3f09e42f6cd2e0d6bfd155a27f71a332c66aa7653d"
+            "url": "https://github.com/reflex-search/reflex/releases/download/v1.7.0/reflex-search-x86_64-pc-windows-msvc.zip",
+            "hash": "202e8d85e79e1119a1b2391517ceb8a1fb8842462d5ccd2ce8357cde3a4ddfba"
         }
     },
     "installer": {
@@ -18,7 +18,13 @@
             "Invoke-WebRequest -OutFile $dir/LICENSE https://raw.githubusercontent.com/reflex-search/reflex/refs/heads/main/LICENSE -UseBasicParsing"
         ]
     },
-    "bin": [ "rfx.exe", [ "rfx.exe", "reflex" ] ],
+    "bin": [
+        "rfx.exe",
+        [
+            "rfx.exe",
+            "reflex"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/reflex-search/reflex"
     },
