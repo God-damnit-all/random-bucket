@@ -23,11 +23,11 @@
         "architecture": {
             "64bit": {
                 "extract_dir": "winget-tui-$version-x64",
-                "url": "https://github.com/shanselman/winget-tui/releases/download/v0.14.0/winget-tui-$version-x64.zip"
+                "url": "https://github.com/shanselman/winget-tui/releases/download/v$version/winget-tui-$version-x64.zip"
             },
             "arm64": {
                 "extract_dir": "winget-tui-$version-arm64",
-                "url": "https://github.com/shanselman/winget-tui/releases/download/v0.14.0/winget-tui-$version-arm64.zip"
+                "url": "https://github.com/shanselman/winget-tui/releases/download/v$version/winget-tui-$version-arm64.zip"
             }
         }
     }
