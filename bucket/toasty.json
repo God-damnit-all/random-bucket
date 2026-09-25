@@ -1,0 +1,31 @@
+{
+    "version": "0.8.1",
+    "description": "Tiny Windows toast notification CLI",
+    "homepage": "https://github.com/shanselman/toasty",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "bin": [ [ "toasty-x64.exe", "toasty" ] ],
+            "url": "https://github.com/shanselman/toasty/releases/download/v0.8.1/toasty-x64.exe",
+            "hash": "1c6c7a2415cd92a1148cf9e08fd2e85fa48eab5752ce3d7e0fdc1f8ea1fa2da2"
+        },
+        "arm64": {
+            "bin": [ [ "toasty-arm64.exe", "toasty" ] ],
+            "url": "https://github.com/shanselman/toasty/releases/download/v0.8.1/toasty-arm64.exe",
+            "hash": "d5f6adc98d238928e958659c29c7d2b77f2b750033666a5db3d28acd85fa525f"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/shanselman/toasty"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/shanselman/toasty/releases/download/v$version/toasty-x64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/shanselman/toasty/releases/download/v$version/toasty-arm64.exe"
+            }
+        }
+    }
+}
