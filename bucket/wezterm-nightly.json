@@ -1,12 +1,12 @@
 {
-    "version": "b09b56c2",
+    "version": "d2f3f05b",
     "description": "GPU-accelerated terminal emulator (nightly builds)",
     "homepage": "https://github.com/wez/wezterm",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip#/b09b56c2.zip",
-            "hash": "d7bf0335cec9e0ed6401c3d44b01948480ffa8768089d789b0d60d5d1df42f20"
+            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip#/d2f3f05b.zip",
+            "hash": "eec0516d2898772c9c4b3daefda6e3cdd34210ca43687ea067a9cc470de5eb1a"
         }
     },
     "installer": {
