@@ -1,12 +1,12 @@
 {
-    "version": "3.9.0",
+    "version": "3.10.2",
     "description": "Blazingly fast CLI to remove comments from code using tree-sitter grammars",
     "homepage": "https://github.com/Goldziher/uncomment",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Goldziher/uncomment/releases/download/v3.9.0/uncomment-x86_64-pc-windows-gnu.zip",
-            "hash": "5ef1ffe3324b2b3373bcfe9fa9211655812643b56f9cc7a1f12872f0581ee138"
+            "url": "https://github.com/Goldziher/uncomment/releases/download/v3.10.2/uncomment-x86_64-pc-windows-gnu.zip",
+            "hash": "f8198efacb79e66de50e1d83f4d92c726805ad589f59a537d1b2dbd0be9424ac"
         }
     },
     "bin": "uncomment.exe",
