@@ -38,7 +38,7 @@
         "    }",
         "}",
         "Move-Item -PSPath $dir\\$target\\bun.exe $dir\\bun.exe",
-        "Get-ChildItem -PSPath $dir | Remove-Item bun-windows-* -Recurse"
+        "Get-ChildItem -PSPath $dir -Filter bun-windows-* | Remove-Item -Recurse"
     ],
     "bin": [
         "bun.exe",
