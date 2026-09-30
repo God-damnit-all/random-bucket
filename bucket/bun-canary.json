@@ -1,0 +1,81 @@
+{
+    "version": "1.4.3-canary.1+bf42a525d",
+    "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.",
+    "homepage": "https://bun.sh/",
+    "license": "MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
+                "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
+            ],
+            "hash": [
+                "2eadf1b58e0171217df4c89b3f0440d93279fd69bc03455a8a6aaa8836ffb460",
+                "714d37ff66b2736ac2cdd3795745cf2b2cdd49cdc7edbf9be51601ea9d7757c5"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip",
+            "hash": "6f0e9fee5536c6430ad77e96b687a36d369037e89dc647ae137197393825cf0b"
+        }
+    },
+    "pre_install": [
+        "# Extract the appropriate binary based on architecture and CPU features",
+        "if ($architecture -eq 'arm64') {",
+        "    $target = 'bun-windows-aarch64'",
+        "}",
+        "else {",
+        "    $avx2 = Start-Job {",
+        "        Add-Type Kernel32 '[DllImport(\"kernel32.dll\")] public static extern bool IsProcessorFeaturePresent(int ProcessorFeature);' -NS Win32",
+        "        return [Win32.Kernel32]::IsProcessorFeaturePresent(40)",
+        "    } | Receive-Job -Wait -AutoRemoveJob",
+        "    $target = 'bun-windows-x64'",
+        "    if (-not $avx2) {",
+        "        $target += '-baseline'",
+        "    }",
+        "}",
+        "Move-Item -PSPath $dir\\$target\\bun.exe $dir\\bun.exe",
+        "Get-ChildItem -PSPath $dir | Remove-Item bun-windows-* -Recurse"
+    ],
+    "bin": [
+        "bun.exe",
+        [
+            "bun.exe",
+            "bunx",
+            "x"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$dl_url = 'https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip'",
+            "$dl_path = cache_path 'bun-canary' 'unknown' $dl_url",
+            "$dl_dir = [IO.Path]::GetDirectoryName($dl_path)",
+            "Invoke-WebRequest -OutFile $dl_path $dl_url",
+            "[void](Expand-Archive -LiteralPath $dl_path -DestinationPath $dl_dir)",
+            "$ver = & \"$dl_dir\\bun-windows-x64\\bun.exe\" --revision",
+            "Remove-Item -PSPath $dl_path, $dl_dir\\bun-windows-x64 -Recurse -Force",
+            "return $ver"
+        ],
+        "regex": "(?<version>\\S+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
+                    "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
+                ]
+            },
+            "arm64": {
+                "url": "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://api.github.com/repos/oven-sh/bun/releases/tags/canary",
+            "jsonpath": "$..assets[?(@.name == '$basename')].digest"
+        }
+    }
+}
