@@ -1,27 +1,27 @@
 {
-    "version": "0.34.2",
+    "version": "0.34.3",
     "description": "A language that compiles to Lua (just like the MoonScript language it's derived from); it continues to adopt new features to stay up-to-date",
     "homepage": "https://yuescript.org/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.2/yue-windows-x64.7z",
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.2/yue-windows-x64-lua53-dll.7z"
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.3/yue-windows-x64.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.3/yue-windows-x64-lua53-dll.7z"
             ],
             "hash": [
-                "367e79f450dc60d96d248c8e1d97b4ec47729b963f64226888fb8e111fc349bf",
-                "1c15efba036d5e7cbcebf7ded19dd500e0d3a847ce882726c7b4e1c01befd7a1"
+                "548b2fe699f46080cbca6c3d5951df2bcbcbb6bbdd215744054020962e6b7075",
+                "ea3edb12c44982807d7377f5222920e7eb80884bda90da0acb8112a34fdcb3be"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.2/yue-windows-x86.7z",
-                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.2/yue-windows-x86-lua53-dll.7z"
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.3/yue-windows-x86.7z",
+                "https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.3/yue-windows-x86-lua53-dll.7z"
             ],
             "hash": [
-                "89fbf7f2d3bed9b5a0baeb30b94772acb3e4690c8400d8b3e79cff468e02ff43",
-                "879cf240cf5729542bbcd85f21349c0c86c00a6eb8e8489857196aa60692f384"
+                "5da1f4fd6036121c920f6fc57c4435dc7f88fa6cbb87cc5ad49bc8a0c50bf357",
+                "42f299b3d27793daaa3c288835982b2a4b3252015c1128a413cb659c28304fa7"
             ]
         }
     },
