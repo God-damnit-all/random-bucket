@@ -1,12 +1,12 @@
 {
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "TUI markdown reader",
     "homepage": "https://github.com/jaschadub/glum",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jaschadub/glum/releases/download/v0.4.0/glum-v0.4.0-x86_64-pc-windows-msvc.zip",
-            "hash": "34a2c2bc2aaabc9a0c6b408726882beb0bc3c6a12250f5333115f6208b21b75d"
+            "url": "https://github.com/jaschadub/glum/releases/download/v0.4.1/glum-v0.4.1-x86_64-pc-windows-msvc.zip",
+            "hash": "330208b3fc18e2f50252e09ed39281acc933b4059f3f4d155faad544c8b5812e"
         }
     },
     "bin": "glum.exe",
