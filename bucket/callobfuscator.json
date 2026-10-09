@@ -1,0 +1,34 @@
+{
+    "version": "2.0",
+    "description": "Obfuscate specific Windows APIs with different APIs",
+    "homepage": "https://github.com/d35ha/CallObfuscator",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/d35ha/CallObfuscator/releases/download/2.0/cobf.zip",
+            "hash": "32f20438f00878d924b5024de2b9b5c2446c4e507b19116abbf90050f3f16a44"
+        }
+    },
+    "pre_install": "$null = if (!(Test-Path -PSPath $persist_dir\\config.ini)){ New-Item $persist_dir\\config.ini }",
+    "extract_to": "__tmpDir",
+    "post_install": [
+        "if (!(Get-Item -PSPath $persist_dir\\config.ini).Length) {",
+        "    Move-Item -PSPath $persist_dir\\__tmpDir\\config.ini -Destination $persist_dir\\ -Force",
+        "}",
+        "$target = switch ($architecture) { '32bit' { 'cobf_x86.exe' } '64bit' { 'cobf_x64.exe' } }",
+        "Move-Item -PSPath $persist_dir\\__tmpDir\\$target -Destination $persist_dir\\cobf.exe -Force",
+        "Remove-Item -PSPath $persist_dir\\__tmpDir\\ -Recurse"
+    ],
+    "bin": "cobf.exe",
+    "persist": "config.ini",
+    "checkver": {
+        "github": "https://github.com/d35ha/CallObfuscator"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/d35ha/CallObfuscator/releases/download/$version/cobf.zip"
+            }
+        }
+    }
+}
