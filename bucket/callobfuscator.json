@@ -9,7 +9,11 @@
             "hash": "32f20438f00878d924b5024de2b9b5c2446c4e507b19116abbf90050f3f16a44"
         }
     },
-    "pre_install": "$null = if (!(Test-Path -PSPath $persist_dir\\config.ini)){ New-Item $persist_dir\\config.ini }",
+    "pre_install": [
+        "$null = if (!(Test-Path -PSPath $persist_dir\\config.ini)){ New-Item $persist_dir\\config.ini }",
+        "$target = switch ($architecture) { '32bit' { 'cobf_x86.exe' } '64bit' { 'cobf_x64.exe' } }",
+        "$null = New-Item $persist_dir\\cobf.exe"
+    ],
     "extract_to": "__tmpDir",
     "post_install": [
         "if (!(Get-Item -PSPath $persist_dir\\config.ini).Length) {",
