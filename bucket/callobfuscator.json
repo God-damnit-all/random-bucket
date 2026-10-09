@@ -10,19 +10,18 @@
         }
     },
     "pre_install": [
-        "$null = if (!(Test-Path -PSPath $persist_dir\\config.ini)){ New-Item $persist_dir\\config.ini }",
-        "$target = switch ($architecture) { '32bit' { 'cobf_x86.exe' } '64bit' { 'cobf_x64.exe' } }",
-        "$null = New-Item $dir\\cobf.exe"
+        "$null = if (!(Test-Path -PSPath $persist_dir\\config.ini)){ New-Item $persist_dir\\config.ini -Force }",
+        "$target = switch ($architecture) { '32bit' { 'cobf_x86.exe' } '64bit' { 'cobf_x64.exe' } }"
     ],
     "extract_to": "__tmpDir",
-    "post_install": [
+    "installer": { "script": [
         "if (!(Get-Item -PSPath $persist_dir\\config.ini).Length) {",
         "    Move-Item -PSPath $dir\\__tmpDir\\config.ini -Destination $persist_dir\\ -Force",
         "}",
         "$target = switch ($architecture) { '32bit' { 'cobf_x86.exe' } '64bit' { 'cobf_x64.exe' } }",
         "Move-Item -PSPath $dir\\__tmpDir\\$target -Destination $dir\\cobf.exe -Force",
         "Remove-Item -PSPath $dir\\__tmpDir\\ -Recurse"
-    ],
+    ]},
     "bin": "cobf.exe",
     "persist": "config.ini",
     "checkver": {
