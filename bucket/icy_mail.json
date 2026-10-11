@@ -1,0 +1,25 @@
+{
+    "version": "0.1.0",
+    "description": "An offline QWK and Blue Wave mail reader",
+    "homepage": "https://github.com/mkrueger/icy_tools",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyMail0.1.0/icy_mail_windows_0.1.0.zip",
+            "hash": "e13ff10459418ec24e4a41565c8ec897bdb223167fdea6ddd62a3ceb4551f665"
+        }
+    },
+    "bin": "icy_mail.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/mkrueger/icy_tools/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "IcyMail([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyMail$version/icy_mail_windows_$version.zip"
+            }
+        }
+    }
+}
