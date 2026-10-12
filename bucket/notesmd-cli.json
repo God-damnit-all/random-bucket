@@ -1,0 +1,30 @@
+{
+    "version": "0.3.7",
+    "description": "Interact with Obsidian vaults from the terminal",
+    "homepage": "https://github.com/Yakitrak/notesmd-cli",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.7/notesmd-cli_0.3.7_windows_amd64.tar.gz",
+            "hash": "9f858b03a6109279f03db0ba3abdf1fffaebd9fc3a3f30a5dc04a054e3d7e731"
+        },
+        "arm64": {
+            "url": "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.7/notesmd-cli_0.3.7_windows_arm64.tar.gz",
+            "hash": "7e7fa94acaf5adeb1c7c16a058bc12d0bde1505520dee501951ce81641dcda40"
+        }
+    },
+    "bin": "notesmd-cli.exe",
+    "checkver": {
+        "github": "https://github.com/Yakitrak/notesmd-cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Yakitrak/notesmd-cli/releases/download/v$version/notesmd-cli_$version_windows_amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/Yakitrak/notesmd-cli/releases/download/v$version/notesmd-cli_$version_windows_arm64.tar.gz"
+            }
+        }
+    }
+}
