@@ -1,0 +1,23 @@
+{
+    "version": "3.1.1",
+    "description": "Deobfuscate Javascript code using ChatGPT",
+    "homepage": "https://github.com/jehna/humanify",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jehna/humanify/releases/download/v3.1.1/humanify-x86_64-pc-windows-msvc.zip",
+            "hash": "d46a46f6994192c5647124844e3f79c552130d6fd52200da5a5dec29b3f1f74b"
+        }
+    },
+    "bin": "humanify.exe",
+    "checkver": {
+        "github": "https://github.com/jehna/humanify"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jehna/humanify/releases/download/v3.1.1/humanify-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
