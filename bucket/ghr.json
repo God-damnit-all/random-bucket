@@ -18,7 +18,7 @@
     "bin": "ghr.exe",
     "installer": {
         "script": [
-            "Move-Item -PSPath $dir/ghr.exe -Destination $dir",
+            "Move-Item -PSPath $dir/bin/ghr.exe -Destination $dir",
             "Remove-Item -PSPath $dir/bin"
         ]
     },
