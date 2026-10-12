@@ -1,0 +1,23 @@
+{
+    "version": "3.0.36",
+    "description": "Universal multi-dictionary CLI encoding/hashing/compression tool",
+    "homepage": "https://github.com/coryzibell/base-d",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coryzibell/base-d/releases/download/v3.0.36/base-d-x86_64-pc-windows-msvc.zip",
+            "hash": "39d6c63f8645edfbf74d66be23d7c68b183eec8a062dfd97c0de6990b0f79f23"
+        }
+    },
+    "bin": "base-d.exe",
+    "checkver": {
+        "github": "https://github.com/coryzibell/base-d"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/coryzibell/base-d/releases/download/v$version/base-d-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
