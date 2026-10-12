@@ -1,0 +1,23 @@
+{
+    "version": "3.1.0",
+    "description": "dd's hashing utility with a twist",
+    "homepage": "https://github.com/dd86k/ddgst",
+    "license": "CC0-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dd86k/ddgst/releases/download/v3.1.0/ddgst-3.1.0-x86_64-windows-msvc.zip",
+            "hash": "b1446a375ba2c0a4ce488cca2415b5c995bad41c817fbfefd7943ba107b532ab"
+        }
+    },
+    "bin": "ddgst.exe",
+    "checkver": {
+        "github": "https://github.com/dd86k/ddgst"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dd86k/ddgst/releases/download/v$version/ddgst-$version-x86_64-windows-msvc.zip"
+            }
+        }
+    }
+}
