@@ -18,6 +18,9 @@
             "64bit": {
                 "url": "https://github.com/hurttlocker/cortex/releases/download/v$version/cortex-windows-amd64.tar.gz"
             }
+        },
+        "hash": {
+            "url": "https://github.com/hurttlocker/cortex/releases/download/v$version/checksums.txt"
         }
     }
 }
