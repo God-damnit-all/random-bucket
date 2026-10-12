@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/jehna/humanify/releases/download/v3.1.1/humanify-x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/jehna/humanify/releases/download/v$version/humanify-x86_64-pc-windows-msvc.zip"
             }
         }
     }
