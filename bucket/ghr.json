@@ -1,0 +1,40 @@
+{
+    "version": "0.8.1",
+    "description": "A toolkit for GitHub releases",
+    "homepage": "https://github.com/cataggar/ghr",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "ghr-0.8.1-windows-x64",
+            "url": "https://github.com/cataggar/ghr/releases/download/v0.8.1/ghr-0.8.1-windows-x64.zip",
+            "hash": "0c5068451b0602c8c9dad7eb3652dd02788717aaff19438bec0074adff10eee3"
+        },
+        "arm64": {
+            "extract_dir": "ghr-0.8.1-windows-arm64",
+            "url": "https://github.com/cataggar/ghr/releases/download/v0.8.1/ghr-0.8.1-windows-arm64.zip",
+            "hash": "5e2b5e71857f6b14e970ddb38b9e239fc6c0a0365f9bd7ef287a5ad7544efcc0"
+        }
+    },
+    "bin": "ghr.exe",
+    "installer": {
+        "script": [
+            "Move-Item -PSPath $dir/ghr.exe -Destination $dir",
+            "Remove-Item -PSPath $dir/bin"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/cataggar/ghr"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "extract_dir": "ghr-$version-windows-x64",
+                "url": "https://github.com/cataggar/ghr/releases/download/v$version/ghr-$version-windows-x64.zip"
+            },
+            "arm64": {
+                "extract_dir": "ghr-$version-windows-arm64",
+                "url": "https://github.com/cataggar/ghr/releases/download/v$version/ghr-$version-windows-arm64.zip"
+            }
+        }
+    }
+}
