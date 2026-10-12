@@ -1,0 +1,26 @@
+{
+    "version": "0.1.1",
+    "description": "TUI workspace for academic research; features a personalized daily papers feed, arXiv search, PDF library management, PDF viewer, Markdown note-taking, automatic paper organization, and manuscript editing with LaTeX and Typst",
+    "homepage": "https://github.com/AfrozSaqlain/Papr",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AfrozSaqlain/Papr/releases/download/v0.1.1/papr-tui-x86_64-pc-windows-msvc.zip",
+            "hash": "58e98be919720075d88aae6e1bd458a0384f77a5274d03188141de2b7fd010fc"
+        }
+    },
+    "bin": "papr.exe",
+    "checkver": {
+        "github": "https://github.com/AfrozSaqlain/Papr"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AfrozSaqlain/Papr/releases/download/v$version/papr-tui-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
