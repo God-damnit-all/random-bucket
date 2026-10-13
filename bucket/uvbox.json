@@ -1,0 +1,33 @@
+{
+    "version": "1.0.9",
+    "description": "Fast, simple, cross-platform Python application packaging as self-bootstrapping executables",
+    "homepage": "https://github.com/AmadeusITGroup/uvbox",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AmadeusITGroup/uvbox/releases/download/v1.0.9/uvbox_1.0.9_windows_amd64.zip",
+            "hash": "e855154972cce6fecebb899fcb410a3b5f439f2cc51a631cdcf9bdcf1ec5190c"
+        },
+        "arm64": {
+            "url": "https://github.com/AmadeusITGroup/uvbox/releases/download/v1.0.9/uvbox_1.0.9_windows_arm64.zip",
+            "hash": "26b93e26cebc9bd3a52ea2ecb4a3177664bea6dde77facc441c156f6245bb9b1"
+        }
+    },
+    "bin": "uvbox.exe",
+    "checkver": {
+        "github": "https://github.com/AmadeusITGroup/uvbox"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AmadeusITGroup/uvbox/releases/download/v1.0.9/uvbox_1.0.9_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/AmadeusITGroup/uvbox/releases/download/v1.0.9/uvbox_1.0.9_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/AmadeusITGroup/uvbox/releases/download/v$version/checksums.txt"
+        }
+    }
+}
