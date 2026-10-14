@@ -1,12 +1,12 @@
 {
-    "version": "0.20.1",
+    "version": "0.21.0",
     "description": "Local-first memory engine for AI agents; store, recall, and search memories with semantic embeddings",
     "homepage": "https://github.com/codecoradev/uteke",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/codecoradev/uteke/releases/download/v0.20.1/uteke-x86_64-pc-windows-msvc-v0.20.1.zip",
-            "hash": "2768fd258d24628071d347f4ea58857fe7065429b9da61e823a720295f3ba56d"
+            "url": "https://github.com/codecoradev/uteke/releases/download/v0.21.0/uteke-x86_64-pc-windows-msvc-v0.21.0.zip",
+            "hash": "58c331ca00d5345edc18ea9a55f50cff932e1428b724d55750795d57a9b9287b"
         }
     },
     "bin": [
