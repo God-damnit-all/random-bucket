@@ -10,9 +10,10 @@
         }
     },
     "pre_install": [
-        "$target = switch ($architecture) { '64bit' { 'x86_64-pc-windows-gnu' } }",
+        "# Future-proofing for Windows 11 ARM64",
+        "$target = @{ 64bit = 'x86_64-pc-windows-gnu'; arm64 = 'arm64ec-pc-windows-msvc' }[$architecture]",
         "Move-Item -LiteralPath ([IO.Path]::Combine($dir, $target, 'broot.exe')) -Destination $dir",
-        "(Get-ChildItem -LiteralPath $dir -Directory).Where{ $_.Name -match '^(?>aarch64|armv7|x86_64)-' } | Remove-Item -Recurse"
+        "(Get-ChildItem -LiteralPath $dir -Directory).Where{ $_.Name -match '^(aarch64|arm64ec|armv7|x86_64)-' } | Remove-Item -Recurse"
     ],
     "bin": "broot.exe",
     "checkver": {
