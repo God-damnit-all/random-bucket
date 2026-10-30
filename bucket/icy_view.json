@@ -1,12 +1,12 @@
 {
-    "version": "0.9.9",
+    "version": "0.9.10",
     "description": "A viewer to browse/view ANSI screens",
     "homepage": "https://github.com/mkrueger/icy_tools",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyView0.9.9/icy_view_windows_0.9.9.zip",
-            "hash": "d6aed9bdbc685b38f98c6c021866e7f05b9960d68e960f1cf02dc1a1cbc8bcfe"
+            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyView0.9.10/icy_view_windows_0.9.10.zip",
+            "hash": "f099fb290fe156b3bad5719d42490549599356bb1f3c8b4027338aa77279025f"
         }
     },
     "bin": "icy_view.exe",
