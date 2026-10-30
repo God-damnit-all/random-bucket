@@ -1,12 +1,12 @@
 {
-    "version": "0.6.0",
+    "version": "0.6.2",
     "description": "A drawing tool supporting almost all ANSI formats",
     "homepage": "https://github.com/mkrueger/icy_tools",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyDraw0.6.0/icy_draw_windows_0.6.0.zip",
-            "hash": "b7fac2f4350bf49c3ee242e716dee4d57955921cf0ea350b68664b4bb55b29b1"
+            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyDraw0.6.2/icy_draw_windows_0.6.2.zip",
+            "hash": "bc24591531b1074ac9e820010e0ffac6e0916967d3239949ed529fde10172da2"
         }
     },
     "bin": "icy_draw.exe",
