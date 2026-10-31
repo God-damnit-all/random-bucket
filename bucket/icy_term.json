@@ -1,12 +1,12 @@
 {
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "A terminal program for legacy BBS systems",
     "homepage": "https://github.com/mkrueger/icy_tools",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyTerm0.9.0/icy_term_windows_0.9.0.zip",
-            "hash": "f7ccb8b192c6567d403da5541a5f54494701e22c317f0106e6ffbf4f7be3c370"
+            "url": "https://github.com/mkrueger/icy_tools/releases/download/IcyTerm0.9.1/icy_term_windows_0.9.1.zip",
+            "hash": "3bf7bb82f38c8132d50824bc45103f04d9d4d4603c2a206a796afed46fb1a6f3"
         }
     },
     "bin": "icy_term.exe",
