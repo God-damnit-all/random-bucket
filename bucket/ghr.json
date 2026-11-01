@@ -1,18 +1,18 @@
 {
-    "version": "0.10.0",
+    "version": "0.10.2",
     "description": "A toolkit for GitHub releases",
     "homepage": "https://github.com/cataggar/ghr",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "extract_dir": "ghr-0.10.0-windows-x64",
-            "url": "https://github.com/cataggar/ghr/releases/download/v0.10.0/ghr-0.10.0-windows-x64.zip",
-            "hash": "8e698abd0c166afbf05f27558345f01832db39d2b6dcd82b70f62c20fb6da4e8"
+            "extract_dir": "ghr-0.10.2-windows-x64",
+            "url": "https://github.com/cataggar/ghr/releases/download/v0.10.2/ghr-0.10.2-windows-x64.zip",
+            "hash": "c72571c5f91892f15361890014af462831e677c39c971ad5c3b4e368fa8d13c6"
         },
         "arm64": {
-            "extract_dir": "ghr-0.10.0-windows-arm64",
-            "url": "https://github.com/cataggar/ghr/releases/download/v0.10.0/ghr-0.10.0-windows-arm64.zip",
-            "hash": "dc5a10ab52d577930fc2dcc6011655e72721996d63dc00cfb2bb89d6a17b6a3b"
+            "extract_dir": "ghr-0.10.2-windows-arm64",
+            "url": "https://github.com/cataggar/ghr/releases/download/v0.10.2/ghr-0.10.2-windows-arm64.zip",
+            "hash": "246f0defa717c595b1ec07396009d23c6809e1c76fc92dfb0555a91bb0657a1f"
         }
     },
     "bin": "ghr.exe",
