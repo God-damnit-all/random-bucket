@@ -1,12 +1,12 @@
 {
-    "version": "4.2.0",
+    "version": "5.0.0",
     "description": "Generate a THIRDPARTY file containing all licenses in a cargo project",
     "homepage": "https://github.com/sstadick/cargo-bundle-licenses",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sstadick/cargo-bundle-licenses/releases/download/v4.2.0/cargo-bundle-licenses-windows-amd64#/cargo-bundle-licenses.exe",
-            "hash": "f0e2add8243ac2b0f0376796080f5ca5fae4397078072a03d8d8c48354632169"
+            "url": "https://github.com/sstadick/cargo-bundle-licenses/releases/download/v5.0.0/cargo-bundle-licenses-windows-amd64#/cargo-bundle-licenses.exe",
+            "hash": "b422048f8c233d529f82fcc80cc48e75d1a3936010104fb079fbe747e4db48d0"
         }
     },
     "installer": {
