@@ -1,18 +1,18 @@
 {
-    "version": "0.14.0",
+    "version": "0.15.0",
     "description": "A terminal UI (TUI) for Windows Package Manager (winget) — search, install, upgrade, and manage packages",
     "homepage": "https://github.com/shanselman/winget-tui",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "extract_dir": "winget-tui-0.14.0-x64",
-            "url": "https://github.com/shanselman/winget-tui/releases/download/v0.14.0/winget-tui-0.14.0-x64.zip",
-            "hash": "a088881a33f3dca12267a80d8b82102783a10afce980de0eafbb1e2180f2ae47"
+            "extract_dir": "winget-tui-0.15.0-x64",
+            "url": "https://github.com/shanselman/winget-tui/releases/download/v0.15.0/winget-tui-0.15.0-x64.zip",
+            "hash": "2b6d466f1154e02bcc5ed767a46eeda6939627884aec321c2faa21651bae0837"
         },
         "arm64": {
-            "extract_dir": "winget-tui-0.14.0-arm64",
-            "url": "https://github.com/shanselman/winget-tui/releases/download/v0.14.0/winget-tui-0.14.0-arm64.zip",
-            "hash": "632d15a4fa26757bb99d1be362d6acd392b7e40befc5b38825a03b2b54d83f8e"
+            "extract_dir": "winget-tui-0.15.0-arm64",
+            "url": "https://github.com/shanselman/winget-tui/releases/download/v0.15.0/winget-tui-0.15.0-arm64.zip",
+            "hash": "ad170ffad2bb5487002c701e933b5f2d5ee60ea721bb9371a4b009336584dc5a"
         }
     },
     "bin": "winget-tui.exe",
