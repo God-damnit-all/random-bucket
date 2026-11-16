@@ -1,0 +1,40 @@
+{
+    "version": "0.5.24",
+    "description": "Typed superset of Lua that transpiles to idiomatic Lua for any target between 5.1 and 5.4 (plus LuaJIT)",
+    "homepage": "https://github.com/nebra-lang/nebra",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nebra-lang/nebra/releases/download/v0.5.24/nebra-win-x64.zip",
+            "hash": "6a69b6e05339d7c8cbebff7e97c454e3d5c9f4e3abaebcb5f6998ab7f241bfee"
+        },
+        "arm64": {
+            "url": "https://github.com/nebra-lang/nebra/releases/download/v0.5.24/nebra-win-arm64.zip",
+            "hash": "50d5af88c025703d41d7afb8adf84f82fe4037bc8d7090689ee4b8d226d69319"
+        }
+    },
+    "post_install": "Remove-Item -PSPath $dir\\neb.exe",
+    "bin": [
+        "nebra.exe",
+        [
+            "nebra.exe",
+            "neb"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/nebra-lang/nebra"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nebra-lang/nebra/releases/download/v$version/nebra-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/nebra-lang/nebra/releases/download/v$version/nebra-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
