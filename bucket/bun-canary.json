@@ -1,5 +1,5 @@
 {
-    "version": "1.4.6-canary.1+3eb8a1b26",
+    "version": "1.4.6-canary.1+bfda77855",
     "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.",
     "homepage": "https://bun.sh/",
     "license": "MIT",
@@ -13,13 +13,13 @@
                 "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
             ],
             "hash": [
-                "78b64e9215264371520bf2476500a46f6803ec0c57240812ebb78ff2f93a62c1",
-                "0cc2d00ba4c451c736e61e887d7d1d2d809bb666d1e598df3b90d1a74984333d"
+                "4435255884fdb0d42877dc263baa53a5410592d0ad3357c7caccd76bf4d2d15b",
+                "885dc473824126c627c2409b797f687fee626f2448e3774ab1f10025485c66e0"
             ]
         },
         "arm64": {
             "url": "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip",
-            "hash": "1082ecda719adc1dbad36b04625956d7c4201f7a9cfa2d245b525662c92cf221"
+            "hash": "0b8e7a64e8d0bb771c05f2c7556e1623bd189f0d69db983dbc576842e8e9e96c"
         }
     },
     "pre_install": [
