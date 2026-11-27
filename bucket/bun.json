@@ -24,7 +24,7 @@
         }
     },
     "pre_install": [
-        "if (Get-Process bun -ea 0) {",
+        "if ('bun' -in [System.Diagnostics.Process]::GetProcesses()) {",
         "    throw 'Bun is currently running, aborting install!'",
         "}",
         "# Extract the appropriate binary based on architecture and CPU features",
