@@ -23,27 +23,29 @@
             "hash": "41f57d49c3c6811888d9633c569e40b4eb1f7e92b5e5336e3abd3af03187d77a"
         }
     },
-    "pre_install": [
-        "if ('bun' -in [System.Diagnostics.Process]::GetProcesses()) {",
-        "    throw 'Bun is currently running, aborting install!'",
-        "}",
-        "# Extract the appropriate binary based on architecture and CPU features",
-        "if ($architecture -eq 'arm64') {",
-        "    $target = 'bun-windows-aarch64'",
-        "}",
-        "else {",
-        "    $avx2 = Start-Job {",
-        "        Add-Type Kernel32 '[DllImport(\"kernel32.dll\")] public static extern bool IsProcessorFeaturePresent(int ProcessorFeature);' -NS Win32",
-        "        return [Win32.Kernel32]::IsProcessorFeaturePresent(40)",
-        "    } | Receive-Job -Wait -AutoRemoveJob",
-        "    $target = 'bun-windows-x64'",
-        "    if (-not $avx2) {",
-        "        $target += '-baseline'",
-        "    }",
-        "}",
-        "Move-Item -PSPath $dir\\$target\\bun.exe $dir\\bun.exe",
-        "Get-ChildItem -PSPath $dir -Filter bun-windows-* | Remove-Item -Recurse"
-    ],
+    "installer": {
+        "script": [
+            "if (Get-Process bun -ea 0) {",
+            "    throw 'Bun is currently running, aborting install!'",
+            "}",
+            "# Extract the appropriate binary based on architecture and CPU features",
+            "if ($architecture -eq 'arm64') {",
+            "    $target = 'bun-windows-aarch64'",
+            "}",
+            "else {",
+            "    $avx2 = Start-Job {",
+            "        Add-Type Kernel32 '[DllImport(\"kernel32.dll\")] public static extern bool IsProcessorFeaturePresent(int ProcessorFeature);' -NS Win32",
+            "        return [Win32.Kernel32]::IsProcessorFeaturePresent(40)",
+            "    } | Receive-Job -Wait -AutoRemoveJob",
+            "    $target = 'bun-windows-x64'",
+            "    if (-not $avx2) {",
+            "        $target += '-baseline'",
+            "    }",
+            "}",
+            "Move-Item -PSPath $dir\\$target\\bun.exe $dir\\bun.exe",
+            "Get-ChildItem -PSPath $dir -Filter bun-windows-* | Remove-Item -Recurse"
+        ]
+    },
     "bin": [
         "bun.exe",
         [
