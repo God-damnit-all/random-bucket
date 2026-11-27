@@ -24,7 +24,8 @@
         }
     },
     "pre_install": [
-        "if (Get-Process bun -ea 0) {",
+        "Get-Process bun -ov isRunning -ea 0",
+        "if ($private:isRunning) {",
         "    throw 'Bun is currently running, aborting install!'",
         "}",
         "# Extract the appropriate binary based on architecture and CPU features",
@@ -44,6 +45,14 @@
         "Move-Item -PSPath $dir\\$target\\bun.exe $dir\\bun.exe",
         "Get-ChildItem -PSPath $dir -Filter bun-windows-* | Remove-Item -Recurse"
     ],
+    "installer": {
+        "script": [
+            "Get-Process bun -ov isRunning -ea 0",
+            "if ($private:isRunning) {",
+            "    throw 'Bun is currently running, aborting upgrade!'",
+            "}"
+        ]
+    }
     "bin": [
         "bun.exe",
         [
