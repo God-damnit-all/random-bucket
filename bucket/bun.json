@@ -24,6 +24,9 @@
         }
     },
     "pre_install": [
+        "if (Get-Process bun -ea 0) {",
+        "    throw 'Bun is currently running, aborting install!'",
+        "}",
         "# Extract the appropriate binary based on architecture and CPU features",
         "if ($architecture -eq 'arm64') {",
         "    $target = 'bun-windows-aarch64'",
